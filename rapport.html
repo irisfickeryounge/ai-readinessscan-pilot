@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GVI-AI-readinessrapport</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/brand/gvi-mark-g-star-palette.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/scan.css">
+  <link rel="stylesheet" href="css/report.css">
+</head>
+<body class="report-body">
+  <div class="rtoolbar">
+    <span><strong id="rtitle">Je volledige rapport</strong> <span class="muted">· bewaar het als pdf via het printvenster</span></span>
+    <button class="btn btn--primary" type="button" id="print">Download als pdf</button>
+  </div>
+  <main id="report" class="wrap"><p class="muted">Het rapport wordt opgebouwd…</p></main>
+  <script type="module">
+    import { buildConfig } from './js/config.js';
+    import { computeResult } from './js/engine.js';
+    import { load } from './js/state.js';
+    import { renderReport } from './js/report.js';
+    import { PILOT, decodeState } from './js/pilot.js';
+    import { PILOT_COPY } from './js/copy.js';
+
+    const el = document.getElementById('report');
+    const params = new URLSearchParams(location.search);
+    const test = params.has('test');
+    const local = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+    // ?demo (alleen lokaal): voorbeeldrapport met een fictief profiel
+    // Pilot: de deelnemer krijgt de samenvatting (?kort). In de pilot-build bestaat alleen die.
+    const summary = PILOT.enabled || params.has('kort');
+    // Antwoordcode achter #d= : alleen in de lokale werkversie, zodat Iris het volledige rapport van een deelnemer kan openen.
+    const fromCode = !PILOT.enabled && location.hash.startsWith('#d=') ? decodeState(decodeURIComponent(location.hash.slice(3))) : null;
+    const state = fromCode || (params.has('demo') && local ? await fetch('data/demo-state.json').then((r) => r.json()) : load());
+    if (summary) document.getElementById('rtitle').textContent = PILOT_COPY.report.toolbar;
+    const [model, bronnen] = await Promise.all([
+      fetch('data/scan-model.v0.4.json').then((r) => r.json()),
+      fetch('data/bronnen.json').then((r) => r.json()).catch(() => null),
+    ]);
+    if (location.hash.startsWith('#d=') && !fromCode) {
+      el.innerHTML = '<div class="card"><h1>Antwoordcode niet leesbaar</h1><p>De code is onvolledig of beschadigd. Plak de hele mail opnieuw.</p><a class="btn btn--primary" href="inlezen.html">Opnieuw inlezen</a></div>';
+    } else if (!state.request?.verified && !test && !(params.has('demo') && local)) {
+      el.innerHTML = summary
+        ? `<div class="card"><h1>Nog geen samenvatting</h1><p>${PILOT_COPY.report.none}</p><a class="btn btn--primary" href="index.html#/indienen">${PILOT_COPY.report.toScan}</a></div>`
+        : '<div class="card"><h1>Nog geen rapport</h1><p>Vraag eerst het volledige rapport aan en bevestig je code.</p><a class="btn btn--primary" href="index.html#/rapport">Naar de aanvraag</a></div>';
+    } else {
+      const cfg = buildConfig(model);
+      const result = computeResult(model, cfg, state);
+      el.innerHTML = renderReport(model, result, state, bronnen, { summary });
+      const who = (state.request?.org || state.request?.name || '').replace(/[^\p{L}\p{N}]+/gu, '-');
+      document.title = `GVI-AI-readiness${summary ? 'scan-samenvatting' : 'rapport'}${who ? '-' + who : ''}`;
+      if (new URLSearchParams(location.search).has('print')) setTimeout(() => print(), 400);
+    }
+    document.getElementById('print').addEventListener('click', () => print());
+  </script>
+</body>
+</html>

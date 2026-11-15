@@ -1,0 +1,563 @@
+{
+  "note": "Bronnenlijst bij de scan, afgeleid van de pakketcodes in de sources-velden van scan-model.v0.2.json. De verwijzingen zijn letterlijk overgenomen uit de koppen van de Fabel-leesnotities (Fabel_Leesnotities_2026-11-10, 04_ToU/05_Thesis_Activation/05_Leeswerk); er is niets aangevuld. Bronnen zonder jaar of titel in de notities zijn gemarkeerd met incomplete: true. Pakketten bevatten soms meer bronnen dan het anker noemt.",
+  "packages": {
+    "G01": {
+      "label": "AI-portfolio, use-caseselectie en business value",
+      "sources": [
+        {
+          "key": "Bodendorf",
+          "reference": "Bodendorf, F. (2025). A data-driven use case planning and assessment approach for AI portfolio management. Electronic Markets 35:22"
+        },
+        {
+          "key": "Sturm & van Giffen",
+          "reference": "Sturm, S. & van Giffen, B. (2025). How Organizations Design Portfolio Management to Govern AI: A Taxonomy Approach. ECIS 2025 Proceedings"
+        },
+        {
+          "key": "Dey & Bhaumik (APPRAISE)",
+          "reference": "Dey, D. & Bhaumik, D. (2024). APPRAISE: a Governance Framework for Innovation with Artificial Intelligence Systems. Proceedings AIES 2024 (AAAI/ACM), pp. 328–340"
+        },
+        {
+          "key": "Enholm",
+          "reference": "Enholm, I.M., Papagiannidis, E., Mikalef, P. & Krogstie, J. (2022). Artificial Intelligence and Business Value: a Literature Review. Information Systems Frontiers 24:1709–1734"
+        }
+      ]
+    },
+    "G02": {
+      "label": "Tooling voor AI-accountability en responsible-AI-evaluatie",
+      "sources": [
+        {
+          "key": "Berman",
+          "reference": "Berman, Goyal & Madaio, 2024, \"A Scoping Study of Evaluation Practices for Responsible AI Tools: Steps Towards Effectiveness Evaluations\" (CHI '24)"
+        },
+        {
+          "key": "Kaye",
+          "reference": "Kaye, 2025, \"Uncovering Areas for AI Governance Tools Refinement through Real-World Use Case Analysis from Canada, Chile and Singapore\" (EWAF'25, Eindhoven)"
+        },
+        {
+          "key": "Ojewale",
+          "reference": "Ojewale, Steed, Vecchione, Birhane & Raji, 2025 (preprint v3, 27 feb 2025; CHI '25 art. 815), \"Towards AI Accountability Infrastructure: Gaps and Opportunities in AI Audit Tooling\""
+        }
+      ]
+    },
+    "G04": {
+      "label": "Algoritmeregisters, governancerollen en AI-governance in het mkb",
+      "sources": [
+        {
+          "key": "Nieuwenhuizen",
+          "reference": "Nieuwenhuizen, E. (2025; Information Polity 29(4), 415–433), \"Algorithm Registers: A Box-Ticking Exercise or Meaningful Tool for Transparency?\""
+        },
+        {
+          "key": "Schuitemaker",
+          "reference": "Schuitemaker, van Vliet, Brinkkemper, van de Weerd & España (2024; BPMDS/EMMSAD 2024, LNBIP 511, pp. 325–340), \"Realizing the Accountability of Algorithms in the Public Sector: A Reference Method for Managing Algorithm Registers\" (RM4AR)"
+        },
+        {
+          "key": "Sheik",
+          "reference": "Sheik, I. & Van der Nest, D.P. (2026; South African Journal of Information Management 28(1), a2225), \"Scaling SME AI through governance: A Technology–Organisation–Environment readiness synthesis for information management\""
+        },
+        {
+          "key": "Haque",
+          "reference": "Haque, A. (2026; Sustainability 18, 10501), \"Responsible AI Governance as an Organisational Capability: A Theory-Building Integrative Review for Sustainable Organisations\""
+        },
+        {
+          "key": "Frimpong",
+          "reference": "Frimpong, V. & Botchey, O.K. (2026; Businesses 6(2), 18), \"Where Are the AI Governance Roles? An Early-Stage Empirical Mapping of Presence, Absence, and Structure in Organisational AI Oversight\""
+        },
+        {
+          "key": "Hussein",
+          "reference": "Hussein, R., Zink, A., Ramadan, B., Howard, F.M., Hightower, M., Shah, S. & Beaulieu-Jones, B.K. (2026; npj Digital Medicine 9:236), \"Advancing healthcare AI governance through a comprehensive maturity model based on systematic review\" (HAIRA)"
+        }
+      ]
+    },
+    "G05": {
+      "label": "AI-governance, bestuur en readiness (banken, bestuurskamers, CDO)",
+      "sources": [
+        {
+          "key": "Domi",
+          "reference": "Domi, Godolja & Sevrani, 2026, \"Artificial Intelligence Governance and Organizational Readiness in Banking: Evidence from Albania\" (Administrative Sciences 16, 385)"
+        },
+        {
+          "key": "Tipurić",
+          "reference": "Tipurić, Hruška & Perić, 2026, \"Boards in the Age of AI: Antecedents, Decisions, and Outcomes of Board-Level AI Governance, A Systematic Review\" (Administrative Sciences 16, 489)"
+        },
+        {
+          "key": "Beulen",
+          "reference": "Beulen & Dans, 2026, \"Artificial Intelligence Governance Mechanisms—The Chief Data Officer Perspective with a Focus on Agentic AI Governance\" (Information 17, 336)"
+        }
+      ]
+    },
+    "G06": {
+      "label": "AI-maturiteit en organisatorische readiness",
+      "sources": [
+        {
+          "key": "Jonak & Wodecki",
+          "reference": "Jonak & Wodecki, 2026, \"The evolution of organisational AI readiness toward an orchestration capability\" (Discover Artificial Intelligence 6:912)"
+        },
+        {
+          "key": "Jaciow",
+          "reference": "Jaciow, Adamczyk, Bartuś, Bratnicka-Myśliwiec, Hoffmann-Burdzińska, Skórska, Strzelecki, Szojda & Wolny, 2026, \"Perceived Benefits, Leadership Engagement and AI Maturity in Polish SMEs\" (Sustainability 18, 4807)"
+        },
+        {
+          "key": "Güngör",
+          "reference": "Güngör, 2026, \"AI Maturity in Cambodia: Individual Usage and Organizational Deployment Across SME Firms and Large Corporations\" (J. Accounting, Finance, Economics, and Social Sciences 11(1), 25–38)"
+        },
+        {
+          "key": "Heger",
+          "reference": "Heger, Passi, Dhanorkar, Kahn, Wang & Vorvoreanu, 2025, \"Towards a Responsible AI Organizational Maturity Model\" (RAI-OM) (Proc. ACM Hum.-Comput. Interact. 9(7), CSCW333)"
+        },
+        {
+          "key": "Ferreira",
+          "reference": "Ferreira, Grilo & Maia, 2025, \"Piloting a maturity model for responsible artificial intelligence: A Portuguese case study\" (Journal of Responsible Technology 22, 100117)"
+        }
+      ]
+    },
+    "G07": {
+      "label": "Governance in de praktijk: casestudies en veldonderzoek",
+      "sources": [
+        {
+          "key": "Wamba-Taguimdje",
+          "reference": "Wamba-Taguimdje, Fosso Wamba, Kala Kamdjoug & Tchatchouang Wanko, 2020, \"Influence of AI on firm performance: the business value of AI-based transformation projects\" (Business Process Management Journal 26(7))"
+        },
+        {
+          "key": "Attia",
+          "reference": "Attia, Maddah, Al-Kaabi e.a., 2026, \"Responsible AI readiness in a humanitarian and development ecosystem: an exploratory case study\" (Frontiers in Public Health 14:1937518)"
+        },
+        {
+          "key": "Kim",
+          "reference": "Kim, Hasan, Kueper, Tang, Hayes, Fine, Balu & Sendak, 2025, \"Establishing organizational AI governance in healthcare: a case study in Canada\" (npj Digital Medicine 8:522)"
+        },
+        {
+          "key": "Alrasbi",
+          "reference": "Alrasbi & Ariaratnam, 2026, \"The Organizational Transformation of Artificial Intelligence in Smart Cities: An Urban Artificial Intelligence Governance Maturity Model\" (Urban Science 10(1):63)"
+        },
+        {
+          "key": "Aguilar",
+          "reference": "Aguilar, Alayón, Torres & Martín, 2026, \"Data-centric AI governance for responsible organizational value: evidence from a European public administration\" (AI & Society 41:6829–6841)"
+        },
+        {
+          "key": "Leon",
+          "reference": "Leon (M.), 2026, \"Governing generative AI in organizations: a design theory and quasi-experimental field study of sociotechnical guardrails\" (The Journal of Supercomputing 82:641)"
+        }
+      ]
+    },
+    "G09": {
+      "label": "Impact- en vertrouwensbeoordelingen (IAMA, OECD-tools, Microsoft RAI, Z-Inspection)",
+      "sources": [
+        {
+          "key": "IAMA",
+          "reference": "Gerards, Muis, Straatman, Vankan, Boiten (v2, 2026; v1 2021 Gerards, Schäfer, Vankan, Muis), Impact Assessment Mensenrechten en Algoritmes"
+        },
+        {
+          "key": "OECD",
+          "reference": "OECD (ONE AI working group), 2021 (OECD Digital Economy Papers No. 312, juni 2021), Tools for Trustworthy AI: A framework to compare implementation tools"
+        },
+        {
+          "key": "Microsoft RAI",
+          "reference": "Vorvoreanu, Heger, Passi, Dhanorkar, Kahn, Wang (Microsoft AETHER Central UX Research & Education), V1, 17 mei 2023, Responsible AI Maturity Model"
+        },
+        {
+          "key": "Fryslân",
+          "reference": "Boonstra, Bruneault, ... Zicari e.a. (24 auteurs; Rijks ICT Gilde/BZK, Provincie Fryslân, Z-Inspection Initiative), 2023/24, Lessons Learned in Performing a Trustworthy AI and Fundamental Rights Assessment (\"Responsible use of AI\" pilot)"
+        }
+      ]
+    },
+    "G10": {
+      "label": "Consultancy- en vendorrapporten over AI-waarde en governance",
+      "sources": [
+        {
+          "key": "McKinsey",
+          "reference": "Tinkoff, Van der Veken, Chui, Balakrishnan, aug 2026, \"The state of AI in 2026: On the road to ROI\""
+        },
+        {
+          "key": "Deloitte",
+          "reference": "Rowan, Ammanath, Mittal e.a., okt 2026, \"The State of AI in the Enterprise: Built differently\""
+        },
+        {
+          "key": "Deloitte Canada",
+          "reference": "Shivpuri e.a., z.j. (jaartal niet in de tekst; Deloitte-Canada-productiecode 20-3287597T), \"Building trust in AI: How to overcome risk and operationalize AI governance\"",
+          "incomplete": true
+        },
+        {
+          "key": "KPMG",
+          "reference": "KPMG International, april 2026, \"The KPMG Trusted AI approach: Accelerating the value of AI with confidence\""
+        },
+        {
+          "key": "PwC",
+          "reference": "PwC (Kosar, Golbin, Aqua), © 2023, \"GenAI responsible AI framework: Creating impactful AI systems that are responsible, consistent and defensible\""
+        },
+        {
+          "key": "Deloitte (persbericht)",
+          "reference": "Deloitte, 29 okt 2026, \"Enterprise AI enters an ROI reckoning: More use, uneven value, reveals Deloitte survey\""
+        },
+        {
+          "key": "EY",
+          "reference": "EY, 10 mei 2024, \"EY.ai Confidence Index: Bolster value through responsible AI adoption\" (discussion paper)"
+        },
+        {
+          "key": "BCG",
+          "reference": "Apotheker, Beauchene, de Bellefonds e.a., sept 2025, \"The Widening AI Value Gap: Build for the Future 2025\""
+        },
+        {
+          "key": "appliedAI",
+          "reference": "Seger, Hartmann, Liebl (appliedAI Initiative, München), z.j. (jaartal niet in de tekst; jongste verwijzing 2020), \"Value Assessment of AI Products and Applications: A Systematic Approach to Quantifying the 'Return on AI (ROAI)'\"",
+          "incomplete": true
+        }
+      ]
+    },
+    "G11": {
+      "label": "Praktijkbronnen: IBM, Deloitte Midden-Oosten, Team Rockstars, TNO-challenge",
+      "sources": [
+        {
+          "key": "IBM (watsonx.governance)",
+          "reference": "Rangarao e.a. (IBM), jan. 2025, \"Simplify Your AI Journey: Ensuring Trustworthy AI with IBM watsonx.governance\" (SG24-8573-00)"
+        },
+        {
+          "key": "IBM (AI maturity)",
+          "reference": "Vaish, Agrawal, Kapoor, Parkin (IBM AI Applications), maart 2021, \"AI maturity framework for enterprise applications\""
+        },
+        {
+          "key": "IBM (responsible AI)",
+          "reference": "Van Antwerp, Rasool, Fowkes, Boinodiris (IBM Consulting), april 2024, \"Delivering responsible AI in the healthcare and life sciences industries\""
+        },
+        {
+          "key": "Deloitte",
+          "reference": "Deloitte Middle East (Lalwani, Khunkaev, Barkawie, Bhattacharya, Palanisamy), sept. 2021, \"AI Readiness in the Middle East: Closing the gap between Ambition and Reality\" (reeks \"Age of With – AI Avatar\")"
+        },
+        {
+          "key": "Team Rockstars",
+          "reference": "Mathijs van Bree (Team Rockstars IT), jan. 2026, \"AI Business Value: From Chaos to Clarity\" (whitepaper met \"Rockstars Return on AI-model\")"
+        },
+        {
+          "key": "TNO",
+          "reference": "TNO met ABN AMRO, UWV, Logius, RVO, DNB, ING e.a., juni 2026, \"Futureproof AI Impact Acceleration Challenge 2026: Finale\" (master slidedeck)"
+        }
+      ]
+    },
+    "M01": {
+      "label": "Maturiteitsmodellen en arbeidseffecten (Winby, Müller, TNO, Mökander)",
+      "sources": [
+        {
+          "key": "Winby & Xu",
+          "reference": "Winby & Xu, 2026 (arXiv 2601.01247, preprint v2), \"Human-Centered AI Maturity Model (HCAI-MM): An Organizational Design Perspective\""
+        },
+        {
+          "key": "Müller",
+          "reference": "Müller, Roth & Kreimeyer, 2026, \"Reframing AI readiness: a multi-dimensional use case-centered AI readiness framework\" (Proc. Design Society 6, DESIGN 2026, doi 10.1017/pds.2026.10605)"
+        },
+        {
+          "key": "TNO",
+          "reference": "De Geit, Bax & Van der Torre, 2026 (TNO-2026-16678, 27 mei 2026), \"AI in de praktijk: Effecten op de productiviteit en kwaliteit van arbeid in vier organisaties\""
+        },
+        {
+          "key": "Mökander",
+          "reference": "Mökander, Schuett, Kirk & Floridi, 2024 (online 2023), \"Auditing large language models: a three-layered approach\", AI and Ethics 4:1085–1115, doi 10.1007/s43681-023-00289-2"
+        }
+      ]
+    },
+    "M02": {
+      "label": "Meetinstrumenten en zelfbeoordelingen (MAILS, Jöhnk-supplement, EDIH, ALTAI, JRC, Mökander)",
+      "sources": [
+        {
+          "key": "MAILS",
+          "reference": "Carolus, Koch, Straka, Latoschik & Wienrich, 2023, \"MAILS - Meta AI literacy scale\" (Computers in Human Behavior: Artificial Humans 1, 100014)"
+        },
+        {
+          "key": "Jöhnk",
+          "reference": "Jöhnk, Weißert & Wyrtki, 2021, \"Ready or Not, AI Comes – An Interview Study of Organizational AI Readiness Factors\", online appendix (Business & Information Systems Engineering)"
+        },
+        {
+          "key": "EDIH",
+          "reference": "European Digital Innovation Hubs, 2024, \"Digital Maturity Assessment Questionnaire for SMEs\" (v2.1, 8 feb 2024; stage T0)"
+        },
+        {
+          "key": "ALTAI",
+          "reference": "High-Level Expert Group on AI (AI HLEG), Europese Commissie, 2020, \"The Assessment List for Trustworthy Artificial Intelligence (ALTAI) for self assessment\""
+        },
+        {
+          "key": "Mökander",
+          "reference": "Mökander, 2023, \"Auditing of AI: Legal, Ethical and Technical Approaches\" (Digital Society 2:49; review paper en editorial bij een topical collection)"
+        },
+        {
+          "key": "JRC",
+          "reference": "Kalpaka, Rissola, De Nigris & Nepelski (JRC), 2023, \"Digital Maturity Assessment (DMA) Framework & Questionnaires for SMEs/PSOs: A guidance document for EDIHs\" (JRC133234)"
+        }
+      ]
+    },
+    "R01": {
+      "label": "Kernbronnen AI-readiness en mkb-adoptie",
+      "sources": [
+        {
+          "key": "Jöhnk",
+          "reference": "Jöhnk, Weißert & Wyrtki (2021), \"Ready or Not, AI Comes — An Interview Study of Organizational AI Readiness Factors\", Business & Information Systems Engineering 63(1):5–20"
+        },
+        {
+          "key": "Holmström",
+          "reference": "Holmström, J. (2022), \"From AI to digital transformation: The AI readiness framework\", Business Horizons 65, 329–339"
+        },
+        {
+          "key": "Oldemeyer",
+          "reference": "Oldemeyer, Jede & Teuteberg (2025; online 1 feb 2024), \"Investigation of artificial intelligence in SMEs: a systematic review of the state of the art and the main implementation challenges\", Management Review Quarterly 75:1185–1227"
+        },
+        {
+          "key": "Vankan",
+          "reference": "Dialogic: Vankan, Verhagen, Brouwers, Boiten, de Moor & van der Vorst (2025), \"Onderzoek AI-gebruik in het mkb. Ambitie of aarzeling?\", in opdracht van het Ministerie van Economische Zaken, publicatienr. 2025.035-2531, 29 september 2025"
+        }
+      ]
+    },
+    "R02": {
+      "label": "AI-adoptie door het mkb (OECD 2025), AI en bedrijfsrisico, GDPR-naleving, dark patterns",
+      "sources": [
+        {
+          "key": "OECD",
+          "reference": "Calvino, Bianchini, Lane, Montegu, Verger, Ancheva e.a. (2025), \"AI adoption by small and medium-sized enterprises\" (OECD discussion paper voor de G7)"
+        },
+        {
+          "key": "Drydakis",
+          "reference": "Drydakis, N. (2022), \"Artificial Intelligence and Reduced SMEs' Business Risks. A Dynamic Capabilities Analysis During the COVID-19 Pandemic\", Information Systems Frontiers 24:1223–1247"
+        },
+        {
+          "key": "Sirur",
+          "reference": "Sirur, S., Nurse, J.R.C., Webb, H. (2018), \"Are we there yet? Understanding the challenges faced in complying with the General Data Protection Regulation (GDPR)\", 2nd International Workshop on Multimedia Privacy and Security (MPS '18), ACM CCS; arXiv:1808.07338"
+        },
+        {
+          "key": "Nouwens",
+          "reference": "Nouwens, M., Liccardi, I., Veale, M., Karger, D., Kagal, L. (2020), \"Dark Patterns after the GDPR: Scraping Consent Pop-ups and Demonstrating their Influence\", CHI '20 (arXiv:2001.02479)"
+        }
+      ]
+    },
+    "R03": {
+      "label": "Enquête AI-gebruik EU-bedrijven, Morningside-workshopmateriaal, AP-handreikingen AI-geletterdheid",
+      "sources": [
+        {
+          "key": "EU-survey",
+          "reference": "Kazakova, Dunne, Bijwaard (Ipsos); Gossé, Hoffreumon, van Zeebroeck (iCite/ULB), 2020, \"European enterprise survey on the use of technologies based on artificial intelligence. Final report\" (EC DG CNECT)"
+        },
+        {
+          "key": "Morningside",
+          "reference": "Morningside AI, juni 2025, \"AI Leadership Workshop\" (slide deck-template, \"Prepared for\" [naam klant leeg])"
+        },
+        {
+          "key": "Morningside (transcript)",
+          "reference": "Josh Brown (CEO/co-founder Morningside AI), 2026, \"How We Run AI Workshops\" (YouTube-transcript, ~21 min)"
+        },
+        {
+          "key": "AP",
+          "reference": "Autoriteit Persoonsgegevens (AP), februari 2025, \"Aan de slag met AI-geletterdheid. Perspectief op kennisopbouw over AI-systemen bij organisaties\" (bijlage bij de vierde Rapportage AI- & Algoritmerisico's Nederland)"
+        },
+        {
+          "key": "AP (vervolg)",
+          "reference": "Autoriteit Persoonsgegevens (AP), oktober 2025, \"Verder bouwen aan AI-geletterdheid. Een kernvoorwaarde voor verantwoorde AI\" (2e handreiking)"
+        }
+      ]
+    },
+    "R04": {
+      "label": "OECD 2021, The Digital Transformation of SMEs (deel 1)",
+      "sources": [
+        {
+          "key": "OECD",
+          "reference": "Kergroach e.a. (OECD), 2021, \"The Digital Transformation of SMEs\" (OECD Studies on SMEs and Entrepreneurship), alleen pdf-p. 1–138 (voorwerk, Exec summary, Ch.1 t/m Ch.3 tot pdf-p. 138)"
+        }
+      ]
+    },
+    "R05": {
+      "label": "OECD 2021, The Digital Transformation of SMEs (deel 2)",
+      "sources": [
+        {
+          "key": "OECD",
+          "reference": "OECD (2021), The Digital Transformation of SMEs, OECD Studies on SMEs and Entrepreneurship, OECD Publishing, Paris — deel 2 (pdf-p. 139–275)"
+        }
+      ]
+    },
+    "R06": {
+      "label": "AI Act (tekst en toelichting, deel 1)",
+      "sources": [
+        {
+          "key": "AI Act",
+          "reference": "Europees Parlement en Raad, 2024, Verordening (EU) 2024/1689 (Artificial Intelligence Act), PB L 12.7.2024"
+        },
+        {
+          "key": "Edwards",
+          "reference": "Edwards, L., 2022 (april), The EU AI Act: a summary of its significance and scope (Ada Lovelace Institute expert explainer)"
+        }
+      ]
+    },
+    "R07": {
+      "label": "AI Act (tekst, deel 2) en kritische analyse",
+      "sources": [
+        {
+          "key": "AI Act",
+          "reference": "Verordening (EU) 2024/1689 (Artificial Intelligence Act), OJ L 12.7.2024, pdf-p. 73–144"
+        },
+        {
+          "key": "Veale",
+          "reference": "Veale & Zuiderveen Borgesius, 2021, \"Demystifying the Draft EU Artificial Intelligence Act: Analysing the good, the bad, and the unclear elements of the proposed approach\""
+        }
+      ]
+    },
+    "R08": {
+      "label": "AI-governance en AI-geletterdheid",
+      "sources": [
+        {
+          "key": "Batool",
+          "reference": "Batool, Zowghi & Bano (2025), \"AI governance: a systematic literature review\", AI and Ethics 5:3265–3279"
+        },
+        {
+          "key": "Mäntymäki",
+          "reference": "Mäntymäki, Minkkinen, Birkstedt & Viljanen (2022), \"Defining organizational AI governance\", AI and Ethics 2:603–609"
+        },
+        {
+          "key": "NIST",
+          "reference": "National Institute of Standards and Technology (2023), \"Artificial Intelligence Risk Management Framework (AI RMF 1.0)\", NIST AI 100-1"
+        },
+        {
+          "key": "Block",
+          "reference": "Block, Görlich, Lautenschlager, Mayer, Stramm, Urbach, Wendt & Wendt (2025), \"AI literacy requirements according to Art. 4 AI Act: Legal analysis and practical measures\" (whitepaper)"
+        },
+        {
+          "key": "Lintner",
+          "reference": "Lintner (2024), \"A systematic review of AI literacy scales\", npj Science of Learning 9:50"
+        },
+        {
+          "key": "Long & Magerko",
+          "reference": "Long & Magerko (2020), \"What is AI Literacy? Competencies and Design Considerations\", CHI 2020"
+        }
+      ]
+    },
+    "R09": {
+      "label": "Effect van generatieve AI op werk en mens-AI-combinaties",
+      "sources": [
+        {
+          "key": "Brynjolfsson",
+          "reference": "Brynjolfsson, Li & Raymond (2025), \"Generative AI at Work\", Quarterly Journal of Economics 140(2), 889–942"
+        },
+        {
+          "key": "Dell'Acqua",
+          "reference": "Dell'Acqua, Ayoubi, Lifshitz, Sadun, Mollick E., Mollick L., Han, Goldman, Nair, Taub & Lakhani (2025), \"The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise\", NBER Working Paper 33641 (april 2025)"
+        },
+        {
+          "key": "Vaccaro",
+          "reference": "Vaccaro, Almaatouq & Malone (2024), \"When Are Combinations of Humans and AI Useful? A Systematic Review and Meta-Analysis\" (arXiv:2405.06087v2, 29 okt 2024; gepubliceerd als Nature Human Behaviour 8, 2293–2303, volgens de referentie in Brynjolfsson)"
+        }
+      ]
+    },
+    "R10": {
+      "label": "Kritisch denken, overreliance en cognitive offloading bij AI-gebruik",
+      "sources": [
+        {
+          "key": "Lee",
+          "reference": "Lee, Sarkar, Tankelevitch, Drosos, Rintel, Banks, Wilson (2025), \"The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers\" (CHI '25)"
+        },
+        {
+          "key": "Buçinca",
+          "reference": "Buçinca, Malaya, Gajos (2021), \"To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance on AI in AI-assisted Decision-making\" (Proc. ACM HCI 5, CSCW1, art. 188)"
+        },
+        {
+          "key": "Fan",
+          "reference": "Fan, Tang, Le, Shen, Tan, Zhao, Shen, Li, Gašević (2025), \"Beware of Metacognitive Laziness: Effects of Generative Artificial Intelligence on Learning Motivation, Processes, and Performance\" (tijdschriftartikel, Journal Section; British Journal of Educational Technology-stijl \"Practitioner Notes\"; journalnaam niet in de tekst vermeld)"
+        },
+        {
+          "key": "Risko",
+          "reference": "Risko & Gilbert (2016), \"Cognitive Offloading\", Trends in Cognitive Sciences 20(9): 676–688"
+        }
+      ]
+    },
+    "R11": {
+      "label": "Cognitieve schuld bij AI-ondersteund schrijven",
+      "sources": [
+        {
+          "key": "Kosmyna",
+          "reference": "Kosmyna, Hauptmann, Yuan, Situ, Liao, Beresnitzky, Braunstein, Maes (2025). Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task"
+        }
+      ]
+    },
+    "R12": {
+      "label": "Ongelijke effecten van generatieve AI en dynamic capabilities",
+      "sources": [
+        {
+          "key": "Otis",
+          "reference": "Otis, Clarke, Delecourt, Holtz & Koning (2024/2025 versie), \"The Uneven Impact of Generative AI on Entrepreneurial Performance: Evidence from a Field Experiment in Kenya\""
+        },
+        {
+          "key": "Teece",
+          "reference": "Teece, D. J. (2007), \"Explicating dynamic capabilities: the nature and microfoundations of (sustainable) enterprise performance\", Strategic Management Journal 28(13): 1319–1350"
+        }
+      ]
+    },
+    "S01": {
+      "label": "State of AI-reader: Arora e.a. 2025 en Deloitte Human Capital Trends 2024",
+      "sources": [
+        {
+          "key": "Arora",
+          "reference": "Arora, Chakraborty & Nishimura (2025), \"AI–Human Hybrids for Marketing Research: Leveraging LLMs as Collaborators\", Journal of Marketing 89(2), 43–70"
+        },
+        {
+          "key": "Deloitte",
+          "reference": "Deloitte, Global Human Capital Trends 2024, \"Thriving beyond boundaries: Human performance in a boundaryless world\" (fragment pdf-p. 30–90 van het rapport; auteurs en uitgever in de notities niet verder gespecificeerd)"
+        }
+      ]
+    },
+    "S02": {
+      "label": "State of AI-reader: Stanford AI Index 2026 (inleiding, R&D, technische prestaties)",
+      "sources": [
+        {
+          "key": "Stanford AI Index",
+          "reference": "Stanford HAI, \"The AI Index 2026 Annual Report\" (AI Index Steering Committee, Stanford University, April 2026; co-chairs Yolanda Gil & Raymond Perrault; lead/editor Sha Sajadieh)"
+        }
+      ]
+    },
+    "S03": {
+      "label": "State of AI-reader: Stanford AI Index 2026 (Responsible AI, Economy)",
+      "sources": [
+        {
+          "key": "Stanford AI Index (H3 Responsible AI)",
+          "reference": "Stanford HAI (AI Index Steering Committee, Stanford University), April 2026, \"The AI Index 2026 Annual Report\", AI Index Report 2026, hoofdstuk 3 \"Responsible AI\" (pdf-p. 301–342; rapportpagina 129–170)"
+        },
+        {
+          "key": "Stanford AI Index (H4 Economy)",
+          "reference": "Stanford HAI (AI Index Steering Committee, Stanford University), April 2026, \"The AI Index 2026 Annual Report\", AI Index Report 2026, hoofdstuk 4 \"Economy\" (pdf-p. 343–402; rapportpagina 171–230)"
+        }
+      ]
+    },
+    "S05": {
+      "label": "State of AI-reader: McKinsey-rapporten, CHT, World Summit AI Playbook",
+      "sources": [
+        {
+          "key": "McKinsey",
+          "reference": "\"The state of AI in 2025: Agents, innovation, and transformation\" (Singla, Sukharevsky, Hall, Yee, Chui, Balakrishnan; QuantumBlack/McKinsey, november 2025); pdf-p. 601–625 (rapport-p. 6–29; rapport-p. 1–5 ontbreken in de bundel)"
+        },
+        {
+          "key": "McKinsey (Superagency)",
+          "reference": "\"Superagency in the Workplace: Empowering people to unlock AI's full potential\" (Mayer, Yee, Chui, Roberts; McKinsey & Company, januari 2025); pdf-p. 626–672 (rapport-p. 1–44)"
+        },
+        {
+          "key": "McKinsey (agentic organization)",
+          "reference": "\"The agentic organization: Contours of the next paradigm for the AI era\" (Sukharevsky, Krivkovich, Gast, Storozhev, Maor, Mahadevan, Hämäläinen, Durth; McKinsey People & Organizational Performance Practice, McKinsey Technology, QuantumBlack; september 2025); pdf-p. 673–683 (artikel-p. 1–11)"
+        },
+        {
+          "key": "Center for Humane Technology",
+          "reference": "\"The AI Roadmap: How We Ensure AI Serves Humanity\" (lead author Pete Furlong; Guirado, Carlton e.a.; CHT, © 2026, waarschijnlijk begin 2026: noemt DEFIANCE Act in senaat jan 2026 en REAIM-top 2026); pdf-p. 684–719 (rapport-p. 1–36; pdf-p. 684 is leeg/omslag)"
+        },
+        {
+          "key": "World Summit AI Playbook",
+          "reference": "\"The AI Workforce Playbook: From assistants to an AI-first organisation\" (World Summit AI-publicatie, 2026; gedistilleerd uit vijf sessies van WSAI 2025); pdf-p. 733–754 (playbook-p. 1–21; file eindigt op pdf-p. 754, p.755 niet in de tekst)"
+        }
+      ]
+    },
+    "S06": {
+      "label": "State of AI-reader: Deloitte Human Capital Trends 2024, PNAS-studie, IBM agentic-AI-gids",
+      "sources": [
+        {
+          "key": "Deloitte",
+          "reference": "Cantrell, Eaton, Forsythe, Griffiths, Van Durme e.a. (Deloitte Insights), 2024, \"2024 Global Human Capital Trends\" (hoofdstukken: slot imagination deficit; digital playgrounds; microcultures; boundaryless HR; evolving leadership)"
+        },
+        {
+          "key": "PNAS Turing-test",
+          "reference": "Mei, Xie, Yuan & Jackson, 2024, \"A Turing test of whether AI chatbots are behaviorally similar to humans\" (PNAS 121(9), e2313925121, gepubliceerd 22 feb. 2024)"
+        },
+        {
+          "key": "IBM",
+          "reference": "IBM (auteurs: IBM Consulting-partners Brenna, Goyal citaten; copyright IBM 2026, bronnen mei–juni 2025), \"Start realizing ROI: A practical guide to agentic AI for tech leaders\""
+        }
+      ]
+    }
+  }
+}

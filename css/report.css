@@ -1,0 +1,97 @@
+/* Rapport: scherm + print (A4). */
+.report-body { background: var(--paper); }
+.rtoolbar { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 20px; background: rgba(255, 255, 255, .95); border-bottom: 1px solid var(--line); }
+.report { padding: 24px 0 60px; }
+.rpage { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px; margin-bottom: 28px; }
+.rhead { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.rhead__logo { width: 110px; flex: none; }
+.rhead h1 { font-size: 2rem; margin: 0 0 4px; }
+.rmeta { color: var(--ink-soft); margin: 0; font-size: .95rem; }
+.rgrid { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+.rradar { max-width: 760px; margin: 0 auto; width: 100%; }
+.rgrid .thermos { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px 32px; }
+.rlegend { justify-content: center; color: var(--ink-soft); }
+.rpillar__title { display: flex; align-items: center; gap: 12px; font: 500 1.7rem/1.2 var(--font-head); }
+.rpillar__title .ptile__icon { width: 40px; height: 40px; }
+.rsub { font-size: 1.1rem; margin: 18px 0 4px; }
+.tag { font: 700 .75rem var(--font); background: var(--signal-tint); color: var(--signal-ink); border-radius: 3px; padding: 3px 10px; }
+.rtalk__list li { margin: 10px 0; }
+.rcta { background: var(--signal-tint); border-left: 4px solid var(--signal); padding: 14px 18px; font-weight: 700; }
+.rtable { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 18px; }
+.rtable th, .rtable td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+.rtable thead th { font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); }
+.rtable tbody th { font-weight: 600; width: 45%; }
+.rsrc h3 { font-size: .95rem; margin: 16px 0 4px; }
+.rsrc h3 span { color: var(--primary); font-weight: 800; margin-right: 4px; }
+.rsrc ul { margin: 0; padding-left: 18px; font-size: .84rem; }
+.rsrc li { margin: 3px 0; }
+.q--compact { display: block !important; }
+.q__id { font-weight: 800; color: var(--primary); margin-right: 4px; }
+.rsources { columns: 2 320px; column-gap: 32px; }
+.rsrc { break-inside: avoid; }
+@media (max-width: 760px) { .rpage { padding: 22px; } .rhead { flex-direction: column; align-items: flex-start; } }
+
+@page { size: A4; margin: 14mm 14mm 16mm; }
+@media print {
+  body, .report-body { background: #fff; font-size: 9.5pt; line-height: 1.45; }
+  .rpage.rpillar { break-after: auto; padding-top: 5mm; }
+  .rpage--first .rradar { break-before: page; }
+  .rpillar .pdetail__head .ptile__icon { display: none; }
+  .rpillar .dim__block { margin-bottom: 5px; }
+  .rpillar .dim__full { margin-bottom: 5px; }
+  .rpillar .dim__label { font-size: 6.5pt; }
+  .rpillar .dim__name { font-size: 11pt; }
+  .rpillar .dim { break-inside: avoid; }
+  .rpillar .dims { gap: 6px; }
+  .rpillar .dim { padding: 8px 12px; }
+  .rpillar .dim__qs li { padding: 3px 0; }
+  .rpillar .dim__talk { padding: 6px 10px; font-size: 9pt; }
+  .rpillar__title { font-size: 15pt; margin-bottom: 4px; }
+  .rpillar .pdetail__approach { margin-bottom: 6px; }
+  .rtalk { break-before: page; }
+  .rpage.rappendix { break-before: page; break-after: auto; }
+  .rsources { columns: 2; column-gap: 8mm; font-size: 8pt; }
+  .rtable { font-size: 8.5pt; }
+  .flag p, .flag .small { font-size: 9pt; }
+  .flags-card, .flag { break-inside: avoid; }
+  .rtable th, .rtable td { padding: 4px 6px; }
+  h2 { font-size: 13pt; }
+  .prio { padding: 8px 12px; break-inside: avoid; } .prios__list { gap: 6px; margin: 8px 0; } .prio__num { width: 24px; height: 24px; font-size: 10pt; }
+  .prio__name { font-size: 11pt; } .adv__list { gap: 2px; margin-top: 4px; } .adv__row { grid-template-columns: 30mm 1fr; }
+  .rpillar .dim__block--step { padding: 6px 10px; }
+  .steps, .steps i, .prio__num, .adv__row--week, .dim__block--step { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rtoolbar, .sim { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  .report { padding: 0; }
+  .rpage { box-shadow: none; border-radius: 0; padding: 0; margin: 0; break-after: page; }
+  .rpage:last-child { break-after: auto; }
+  .card { box-shadow: none; border: 1px solid var(--line); padding: 14px 16px; margin-bottom: 12px; break-inside: avoid; }
+  .card--accent { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .dim, .rsrc, .rtable tr, .thermo { break-inside: avoid; }
+  .thermo__fill, .badge, .flag-pill, .ptile__icon, .dim, .dim__talk, .radar__pill, .radar__band, .radar__sector, .radar__dot, .thermo__track, .legend i, .card--accent { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .thermo__fill { animation: none; }
+  .two-col { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rgrid { margin: 4px 0; }
+  .rradar .radar__label { font-size: 17px; }
+  .rradar .radar__pill text { font-size: 13px; }
+  .rhead { margin-bottom: 8px; } .rhead__logo { width: 80px; } .rhead h1 { font-size: 18pt; }
+  .rlegend { margin: 0; }
+  .rgrid .thermos { gap: 6px; }
+  .rgrid .thermo__score { font-size: 13pt; }
+  .rsub { font-size: 11pt; margin: 6px 0 2px; }
+  .rradar { max-width: 165mm; margin: 0 auto; }
+  .rpage--first .card { padding: 10px 14px; }
+  .rpage--first .note { padding: 6px 10px; margin-bottom: 0; font-size: 8.5pt; }
+  .thermos { gap: 10px; }
+  h1 { font-size: 22pt; }
+  a { color: var(--primary); }
+}
+
+/* v0.4: blokken laten doorlopen in de pdf, alleen de losse kaarten bij elkaar houden. */
+@media print {
+  .rpage--first .rradar { break-before: auto; break-inside: avoid; max-width: 150mm; }
+  .flags-card, .prios { break-inside: auto; }
+  .prio, .flag, .gatenote, .dim__block--step { break-inside: avoid; }
+  .prios__intro { font-size: 10pt; }
+  .dim__block p + p { margin-top: 3px; }
+}
