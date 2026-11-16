@@ -321,9 +321,9 @@ input:focus, textarea:focus { border-color: var(--primary); outline: none; box-s
 .statlegend i { width: 10px; height: 10px; display: inline-block; }
 .statlegend--red i { background: var(--red-fill); } .statlegend--orange i { background: var(--orange-fill); }
 .statlegend--green i { background: var(--green-fill); } .statlegend--grey i { background: var(--grey-fill); }
-.flags-card { border-top: 4px solid var(--red-fill); }
+.flags-card { border-top: 4px solid var(--accent); }
 .flags { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
-.flag { background: var(--red-tint); padding: 14px 18px; border-radius: var(--radius-s); }
+.flag { background: var(--accent-tint); padding: 14px 18px; border-radius: var(--radius-s); }
 .flag p { margin: 4px 0; max-width: 75ch; }
 .flag__head { margin-top: 0 !important; }
 .flag__q { font-weight: 600; }
@@ -454,3 +454,33 @@ input:focus, textarea:focus { border-color: var(--primary); outline: none; box-s
 .prio__now { margin: 0 0 10px; color: var(--ink-soft); border-left: 3px solid var(--line); padding-left: 12px; }
 .prio__label { font-weight: 700; color: var(--ink); }
 .flags__todo { margin: 12px 0 0; font-weight: 600; }
+
+/* Feedbackronde 5 (16-11-2026): het GVI-sterretje markeert de basis van een pijler; geen rode vlaggen meer. */
+.gvistar { color: #ff4fa3; vertical-align: -1px; flex: none; }
+.thermo__name .gvistar { margin-left: 4px; }
+.statlegend--star { gap: 5px; }
+.gate .gvistar { vertical-align: 0; }
+.pdetail__score--green { color: var(--green); } .pdetail__score--orange { color: var(--orange); }
+.pdetail__score--red { color: var(--red); } .pdetail__score--grey, .pdetail__score--disabled { color: var(--grey); }
+.radar__dot--off circle { stroke-dasharray: none; }
+
+/* Pijleroverzicht als zes staven naast elkaar (16-11-2026). Op een smal scherm liggen de staven onder elkaar. */
+.bars { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.bar { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; min-width: 0; }
+.bar__score { font-weight: 800; font-size: 1.4rem; line-height: 1; white-space: nowrap; }
+.bar__score small { font-size: .72rem; font-weight: 600; color: var(--ink-soft); }
+.bar__track { position: relative; display: block; width: 100%; max-width: 76px; height: 150px; background: var(--grey-tint); }
+.bar__fill { position: absolute; inset: auto 0 0 0; height: var(--h); background: var(--grey-fill); transform-origin: bottom; animation: rise 1s ease both; }
+.bar__name { font-size: .82rem; font-weight: 700; line-height: 1.25; hyphens: auto; max-width: 100%; }
+.bar--green .bar__fill { background: var(--green-fill); } .bar--orange .bar__fill { background: var(--orange-fill); } .bar--red .bar__fill { background: var(--red-fill); }
+.bar--grey .bar__fill, .bar--disabled .bar__fill { background: repeating-linear-gradient(45deg, var(--grey-tint) 0 6px, #ddd8e3 6px 12px); }
+.bar--grey .bar__score, .bar--disabled .bar__score { color: var(--grey); }
+@keyframes rise { from { transform: scaleY(0); } }
+@media (prefers-reduced-motion: reduce) { .bar__fill { animation: none; } }
+@media (max-width: 600px) {
+  .bars { grid-template-columns: 1fr; gap: 12px; }
+  .bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name score" "track track"; gap: 4px 10px; text-align: left; align-items: baseline; }
+  .bar__name { grid-area: name; font-size: .95rem; } .bar__score { grid-area: score; font-size: 1.15rem; }
+  .bar__track { grid-area: track; max-width: none; height: 14px; }
+  .bar__fill { inset: 0 auto 0 0; width: var(--h); height: auto; transform-origin: left; animation-name: fill; }
+}

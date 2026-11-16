@@ -117,7 +117,7 @@ export function scorePillar(pillar, answers, context, derived, cfg) {
   if (gate) {
     gateAnswer = effectiveAnswer(gate.q, answers, context, derived);
     const ans = gateAnswer === undefined ? UNKNOWN : gateAnswer;
-    // n.v.t. → poortregel geldt niet, geen rode vlag.
+    // n.v.t. → de basisvoorwaarde geldt niet.
     gateTriggered = ans !== NA && cfg.gateTriggerAnswers.includes(ans);
   }
 
@@ -137,13 +137,10 @@ export function scorePillar(pillar, answers, context, derived, cfg) {
   const unknownShare = unknown / applicable;
   const grey = score === null || compare(unknownShare, cfg.pillarGrey.comparison, cfg.pillarGrey.share);
 
-  let color = grey ? 'grey' : colorFor(score, cfg);
-  let capped = false;
-  if (gateTriggered && color === 'green') {
-    color = 'orange'; // hoogstens oranje
-    capped = true;
-  }
-  return { ...base, status: grey ? 'grey' : 'scored', score, color, capped };
+  // Besluit Iris 16-11-2026: de basisvoorwaarde begrenst de kleur van de pijler niet meer.
+  // De kleur volgt de score; de basisvoorwaarde krijgt een sterretje en staat bovenaan bij "waar je begint".
+  const color = grey ? 'grey' : colorFor(score, cfg);
+  return { ...base, status: grey ? 'grey' : 'scored', score, color, capped: false };
 }
 
 // ---------- AI Act-signalen ----------

@@ -47,15 +47,15 @@
   "pillarGreyIfUnknownShare": 0.3333333333333333,
   "pillarGreyComparison": ">",
   "dimensionDisabledIfAllNA": true,
-  "gateRule": "Staat de poortvraag (★) op 0, op 1 of op \"weet ik niet\", dan is de pijler hoogstens oranje en verschijnt er een rode vlag.",
+  "gateRule": "Elke pijler heeft één basisvoorwaarde (★). Staat die op 0, op 1 of op \"weet ik niet\", dan vraagt dat onderdeel als eerste aandacht. De kleur van de pijler volgt de score.",
   "gateTriggerAnswers": [
    0,
    1,
    "unknown"
   ],
   "firstStepOrder": [
-   "rode vlag bij eigenaarschap (P1) of menselijk toezicht (P6)",
-   "een andere rode vlag",
+   "basisvoorwaarde nog niet op orde bij eigenaarschap (P1) of menselijk toezicht (P6)",
+   "een andere basisvoorwaarde die nog niet op orde is",
    "een grijze pijler: eerst in beeld brengen",
    "de laagste dimensie binnen de gekozen prioriteitspijler",
    "de laagste dimensie overall"
@@ -63,8 +63,8 @@
   "noTotalScore": true,
   "note": "De grenzen 40, 70, een derde en de helft zijn voorlopige ontwerpkeuzes; geen bron geeft onderbouwde afkapwaarden [R13, D2]. We maken ze openbaar in het rapport en herzien ze na de pilots.",
   "prioritiesOrder": [
-   "een rode vlag bij eigenaarschap (P1) of menselijk toezicht (P6)",
-   "een andere rode vlag, met je prioriteitspijler eerst",
+   "een basisvoorwaarde die nog niet op orde is bij eigenaarschap (P1) of menselijk toezicht (P6)",
+   "een andere basisvoorwaarde die nog niet op orde is, met je prioriteitspijler eerst",
    "de laagste dimensie binnen je prioriteitspijler",
    "de laagste dimensies in de andere pijlers"
   ]
@@ -344,15 +344,15 @@
  "pillars": [
   {
    "id": "P1",
-   "name": "Leiderschap & richting",
-   "approach": "Koers, eigenaarschap en middelen.",
+   "name": "Leiderschap & strategie",
+   "approach": "Strategie, eigenaarschap en middelen.",
    "zzpNote": "Werk je alleen, dan ben je zelf eindverantwoordelijk. Vraag 1.2 is dan niet van toepassing.",
    "dimensions": [
     {
      "id": "D1.1",
-     "name": "Koers",
+     "name": "Strategie",
      "term": "strategic alignment",
-     "label": "Koers",
+     "label": "Strategie",
      "explainer": null,
      "questions": [
       {
@@ -461,7 +461,7 @@
      ]
     }
    ],
-   "intro": "AI wordt pas meer dan een verzameling losse proefjes als de leiding er richting aan geeft. In deze pijler kijk je of jullie weten wat je met AI wilt bereiken, of iemand er de verantwoordelijkheid voor draagt en of er tijd en geld voor is. AI-trajecten lopen zelden vast op de techniek. Veel vaker ontbreekt een duidelijk doel, of iemand die erover gaat. Daarom is AI Chefsache."
+   "intro": "AI wordt pas meer dan een verzameling losse pilots als de leiding er richting aan geeft. In deze pijler kijk je of jullie weten wat je met AI wilt bereiken, of iemand er de verantwoordelijkheid voor draagt en of er tijd en geld voor is. AI-trajecten lopen zelden vast op de techniek. Veel vaker ontbreekt het aan prioriteit, een duidelijk doel of iemand die erover gaat. Maak daarom van AI Chefsache."
   },
   {
    "id": "P2",
@@ -592,15 +592,15 @@
   },
   {
    "id": "P3",
-   "name": "AI-geletterdheid & vaardigheden",
-   "approach": "Zicht, basiskennis, kritisch gebruik en eigen denkwerk.",
+   "name": "AI-geletterdheid & training",
+   "approach": "Adoptie, kennis, kritisch gebruik en denkkracht.",
    "zzpNote": "Werk je alleen, dan gaan de vragen over jezelf.",
    "dimensions": [
     {
      "id": "D3.1",
-     "name": "Zicht op gebruik",
-     "term": "AI-use mapping",
-     "label": "Zicht op gebruik",
+     "name": "Adoptie",
+     "term": "AI adoption & use mapping",
+     "label": "Adoptie",
      "explainer": null,
      "questions": [
       {
@@ -634,9 +634,9 @@
     },
     {
      "id": "D3.2",
-     "name": "Basiskennis",
+     "name": "Kennis",
      "term": "foundational AI literacy",
-     "label": "Basiskennis",
+     "label": "Kennis",
      "explainer": null,
      "questions": [
       {
@@ -710,9 +710,9 @@
     },
     {
      "id": "D3.4",
-     "name": "Eerst zelf denken",
+     "name": "Denkkracht",
      "term": "cognitive offloading",
-     "label": "Eigen denkwerk",
+     "label": "Denkkracht",
      "explainer": null,
      "questions": [
       {
@@ -720,13 +720,13 @@
        "fromV03": [
         "3.5"
        ],
-       "text": "Denken mensen die AI gebruiken voor kenniswerk, creatief werk of programmeerwerk eerst zelf na, voordat ze AI om hulp vragen?",
+       "text": "Denken de mensen die AI gebruiken eerst zelf na, voordat ze AI om hulp vragen?",
        "gate": false,
        "anchors": [
         "Nee, de meesten vragen het eerst aan AI.",
         "Dat verschilt per persoon.",
-        "Ja, we hebben afgesproken om eerst zelf een schets of eerste versie te maken.",
-        "Ja, en we hebben die afspraak al eens aangepast aan wat in de praktijk werkt."
+        "Ja, we hebben afgesproken om eerst zelf na te denken, voordat we AI om richting vragen.",
+        "Ja, en we hebben die afspraak al eens aangepast en delen met elkaar wat werkt en wat niet."
        ],
        "sources": [
         "R10-Buçinca, Fan",
@@ -745,19 +745,19 @@
      ]
     }
    ],
-   "intro": "Iedereen die met AI werkt, moet weten wat het kan, waar het misgaat en welke afspraken gelden. Dat is meer dan weten op welke knop je drukt. Het gaat erom dat mensen een uitkomst kunnen beoordelen. In deze pijler kijk je of jullie weten wie met AI werkt, of gebruikers een basis hebben, of ze uitkomsten controleren en of ze zelf blijven nadenken."
+   "intro": "Iedereen die met AI werkt, moet in de basis begrijpen hoe het werkt, weten wat het kan, waar het mis kan gaan en welke afspraken er in de organisatie gelden. Dat is meer dan weten op welke knop je drukt of een vraag kunnen stellen. Het gaat erom dat mensen een uitkomst kunnen beoordelen. In deze pijler kijk je of jullie weten wie met AI werkt, of gebruikers een basis hebben, of ze uitkomsten controleren en of ze zelf blijven nadenken."
   },
   {
    "id": "P4",
-   "name": "Werk & waarde",
-   "approach": "Nulmeting, inbedding, kosten en opbrengst.",
+   "name": "Business & waarde",
+   "approach": "Meting, inbedding, kosten en opbrengst.",
    "zzpNote": null,
    "dimensions": [
     {
      "id": "D4.1",
-     "name": "Nulmeting",
-     "term": "baseline",
-     "label": "Nulmeting",
+     "name": "Meting",
+     "term": "baseline measurement",
+     "label": "Meting",
      "explainer": null,
      "questions": [
       {
@@ -766,13 +766,13 @@
         "4.2",
         "4.1"
        ],
-       "text": "Hebben jullie vastgelegd hoe het werk liep zonder AI, zodat je kunt vergelijken?",
+       "text": "Hebben jullie vastgelegd hoe een werkproces presteerde voordat jullie er AI in gingen gebruiken, zodat je kunt vergelijken?",
        "gate": true,
        "anchors": [
         "Nee, dat hebben we niet vastgelegd.",
         "Nee, we hebben er alleen een gevoel bij.",
         "Ja, we hebben cijfers vastgelegd, globaal of per werkproces.",
-        "Ja, en we hebben met AI opnieuw gemeten en de cijfers vergeleken."
+        "Ja, en we hebben met AI opnieuw gemeten en de cijfers vergeleken, bijvoorbeeld op onze KPI's."
        ],
        "sources": [
         "R09-Vaccaro",
@@ -907,19 +907,19 @@
      ]
     }
    ],
-   "intro": "Veel organisaties experimenteren met AI, maar weinig kunnen laten zien wat het oplevert. Vaak stokt het na een proef, omdat niemand weet hoe het werk er vóór AI voorstond en wat de proef dus heeft opgeleverd. In deze pijler kijk je of jullie een nulmeting hebben, of AI echt in het werk zit, wat het kost en wat het opbrengt."
+   "intro": "Veel organisaties experimenteren met AI, maar weinig kunnen laten zien wat het oplevert. Vaak stopt het na een pilot, omdat niemand kan aantonen wat de toepassing bijdraagt aan de bedrijfsdoelen. Daarvoor moet je weten hoe een werkproces presteerde voordat AI erbij kwam. In deze pijler kijk je of jullie een nulmeting hebben, of AI een vast onderdeel van een werkproces is, wat het kost en wat het oplevert."
   },
   {
    "id": "P5",
    "name": "Data, technologie & agents",
-   "approach": "Gegevens, tools, datasoevereiniteit en agents.",
+   "approach": "Privacy, tools, datasoevereiniteit en agents.",
    "zzpNote": null,
    "dimensions": [
     {
      "id": "D5.1",
-     "name": "Gegevens & privacy",
+     "name": "Privacy",
      "term": "data protection",
-     "label": "Gegevens",
+     "label": "Privacy",
      "explainer": null,
      "questions": [
       {
@@ -991,7 +991,7 @@
      "id": "D5.3",
      "name": "Datasoevereiniteit",
      "term": "data sovereignty & vendor dependence",
-     "label": "Datasoevereiniteit",
+     "label": "Soevereiniteit",
      "explainer": null,
      "questions": [
       {
@@ -1000,12 +1000,12 @@
         "5.4",
         "5.8"
        ],
-       "text": "Weten jullie waar de gegevens blijven die jullie in AI-tools invoeren?",
+       "text": "Weten jullie waar de data worden opgeslagen die jullie in AI-tools invoeren?",
        "gate": false,
        "anchors": [
         "Nee, dat hebben we nog niet uitgezocht.",
         "Van een enkele tool weet iemand het, maar we hebben geen overzicht.",
-        "Ja, van onze belangrijkste tools weten we bij welke leverancier en in welk land de gegevens staan.",
+        "Ja, van onze belangrijkste tools weten we bij welke leverancier en in welk land de data staan.",
         "Ja, en dat heeft al eens meegewogen bij de keuze voor een tool of leverancier."
        ],
        "sources": [
@@ -1041,13 +1041,13 @@
         "5.5",
         "5.6"
        ],
-       "text": "Is afgesproken wat agents bij jullie zelfstandig mogen doen?",
+       "text": "Hebben jullie overzicht over de agents die bij jullie werken, en over wat ze zelfstandig mogen doen?",
        "gate": false,
        "anchors": [
-        "Nee, daar hebben we nog niets over afgesproken.",
-        "Wie een agent instelt, bepaalt dat zelf.",
-        "Ja, per agent is afgesproken wat hij zelf mag en waarvoor eerst een mens akkoord geeft.",
-        "Ja, en we hebben die grenzen al eens aangepast door wat we in de praktijk zagen."
+        "Nee, we hebben geen overzicht en er is niets over afgesproken.",
+        "Nee, wie een agent instelt, bepaalt zelf wat die mag.",
+        "Ja, we weten wie agents gebruikt en waarvoor.",
+        "Ja, en per agent is afgesproken wat hij zelfstandig mag en waarvoor eerst een mens akkoord geeft."
        ],
        "sources": [
         "S05-World Summit AI Playbook, McKinsey agentic organization",
@@ -1072,19 +1072,19 @@
      ]
     }
    ],
-   "intro": "De meeste organisaties gebruiken AI via software die ze inkopen. Dan gaat het niet om ingewikkelde techniek, maar om een paar gewone vragen. Welke gegevens mogen erin? Met welke tools werken we? En waar blijven onze gegevens? Laat je AI zelf taken uitvoeren, als agent, dan komt daar de vraag bij wat zo'n agent zelfstandig mag."
+   "intro": "De meeste organisaties gebruiken AI via software die ze inkopen. Dan komt het erop aan dat je de juiste vragen stelt. Welke data mogen erin? Met welke tools werken we? En waar worden onze data opgeslagen? Laat je AI zelfstandig taken uitvoeren, als agent, dan komen daar nieuwe vragen bij. Welke toegang krijgt zo'n agent? Wat mag hij doen zonder dat een mens meekijkt? En kun je achteraf volgen wat hij heeft gedaan?"
   },
   {
    "id": "P6",
-   "name": "Governance & verantwoordelijkheid",
-   "approach": "Afspraken, toezicht, fouten en wetgeving.",
+   "name": "Governance & verantwoorde AI",
+   "approach": "Beleid, toezicht, incidenten en wetgeving.",
    "zzpNote": null,
    "dimensions": [
     {
      "id": "D6.1",
-     "name": "Afspraken",
+     "name": "AI-beleid",
      "term": "AI policy in practice",
-     "label": "Afspraken",
+     "label": "Beleid",
      "explainer": null,
      "questions": [
       {
@@ -1092,13 +1092,13 @@
        "fromV03": [
         "6.1"
        ],
-       "text": "Hebben jullie afspraken over waarvoor AI wel en niet gebruikt mag worden?",
+       "text": "Hebben jullie een AI-beleid: afspraken over waarvoor AI wel en niet gebruikt mag worden?",
        "gate": false,
        "anchors": [
-        "Nee, daar hebben we nog geen afspraken over.",
-        "We hebben er weleens over gesproken, maar er ligt niets vast.",
-        "Ja, we hebben onze afspraken vastgelegd, bijvoorbeeld in een AI-beleid.",
-        "Ja, en we hebben die afspraken al eens aangepast na ervaringen uit de praktijk."
+        "Nee, we hebben geen AI-beleid en ook geen afspraken over AI.",
+        "We hebben weleens over een AI-beleid gesproken, maar er ligt nog niets vast.",
+        "Ja, we hebben een AI-beleid vastgelegd.",
+        "Ja, en we hebben dat beleid al eens aangepast na ervaringen uit de praktijk."
        ],
        "sources": [
         "G07-Leon (minstens 35% omzeilde onwerkbare regels)",
@@ -1152,9 +1152,9 @@
     },
     {
      "id": "D6.3",
-     "name": "Fouten & leren",
+     "name": "Incidenten",
      "term": "incident management",
-     "label": "Fouten",
+     "label": "Incidenten",
      "explainer": null,
      "questions": [
       {
@@ -1162,13 +1162,13 @@
        "fromV03": [
         "6.4"
        ],
-       "text": "Is afgesproken wat jullie doen als een AI-toepassing een fout maakt?",
+       "text": "Is afgesproken wat jullie doen bij een incident met AI, zoals een fout met gevolgen voor een klant of voor het werk?",
        "gate": false,
        "anchors": [
         "Nee, daar hebben we nog niets over afgesproken.",
         "We lossen het op als het zich voordoet, ieder op een eigen manier.",
-        "Ja, we melden fouten bij een vast aanspreekpunt en bespreken ze.",
-        "Ja, en we hebben onze werkwijze al eens aangepast na een fout."
+        "Ja, we melden incidenten bij een vast aanspreekpunt en bespreken ze.",
+        "Ja, we leggen incidenten vast in een logboek en hebben onze werkwijze daar al eens op aangepast."
        ],
        "sources": [
         "G02-Ojewale (opvolging is het gat)",
@@ -1222,7 +1222,7 @@
      ]
     }
    ],
-   "intro": "Governance klinkt zwaar, maar het begint klein: afspreken waarvoor je AI wel en niet gebruikt, en zorgen dat een mens kan ingrijpen als het misgaat. In deze pijler kijk je of die basis er is, wat jullie doen als AI een fout maakt en of jullie de wetgeving kennen. Je hoeft daarvoor niets nieuws op te tuigen. Je bouwt voort op wat er al is, zoals je privacybeleid."
+   "intro": "Governance klinkt zwaar, maar het begint klein: vastleggen waarvoor je AI wel en niet gebruikt, en zorgen dat een mens kan ingrijpen als het misgaat. In deze pijler kijk je of dat beleid er is, wat jullie doen bij een incident met AI en of jullie de wetgeving kennen. Je hoeft daarvoor niets nieuws op te tuigen. Je bouwt voort op wat er al is, zoals je privacybeleid."
   }
  ],
  "aiActSignals": [

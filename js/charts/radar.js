@@ -1,6 +1,7 @@
 // Spinnenweb als eigen SVG: alle actieve dimensies, gegroepeerd per pijler in de pijlerkleur.
-// Bewust rustig: korte labels, geen statussymbolen. De status (stoplicht) staat in het pijleroverzicht
-// en in de kaarten; hier gaat het om het profiel. Elk punt toont het niveau (0 tot 3), dus kleur draagt niets alleen.
+// Bewust rustig: korte labels, geen statussymbolen en geen cijfers achter de namen (besluit Iris, 16-11-2026).
+// Het niveau lees je af aan de plek van het punt op de ringen; de beschrijving voor schermlezers noemt elk niveau.
+// Alle dimensies staan in het wiel. Wat niet van toepassing is, staat als open punt in het midden.
 const levelOf = (score) => Math.round((score / 100) * 3);
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -14,7 +15,6 @@ export function radarSVG(model, result, { size = 640, animate = true, labels = '
     const pr = result.pillars[pi];
     p.dimensions.forEach((d, di) => {
       const dr = pr.dimensions[di];
-      if (dr.status === 'disabled') return;
       axes.push({ p, d, dr, pi });
     });
   });
@@ -29,7 +29,7 @@ export function radarSVG(model, result, { size = 640, animate = true, labels = '
   let s = `<svg class="radar${animate ? ' radar--animate' : ''}" viewBox="${-padX} ${-padY} ${size + 2 * padX} ${size + 2 * padY}" role="img" aria-labelledby="radar-title radar-desc" xmlns="http://www.w3.org/2000/svg">`;
   s += `<title id="radar-title">Profiel op ${n} dimensies</title>`;
   s += `<desc id="radar-desc">${esc(
-    axes.map((a) => `${a.d.name}: ${a.dr.status === 'grey' ? 'nog niet in beeld' : `niveau ${levelOf(a.dr.score)}`}`).join('; '),
+    axes.map((a) => `${a.d.name}: ${a.dr.status === 'disabled' ? 'niet van toepassing' : a.dr.status === 'grey' ? 'nog niet in beeld' : `niveau ${levelOf(a.dr.score)}`}`).join('; '),
   )}</desc>`;
 
   // Pijlervlakken en -banden in de pijlerkleur
@@ -71,11 +71,12 @@ export function radarSVG(model, result, { size = 640, animate = true, labels = '
 
   // Punten en labels
   axes.forEach((a, i) => {
-    const grey = a.dr.status === 'grey';
+    const off = a.dr.status === 'disabled';
+    const grey = a.dr.status === 'grey' || off;
     const [x, y] = grey ? pt(i, R * 0.06) : pt(i, (R * Math.max(a.dr.score, 3)) / 100);
     const r = size * 0.012;
     s += grey
-      ? `<g class="radar__dot radar__dot--grey" style="--i:${i}"><circle cx="${f(x)}" cy="${f(y)}" r="${r}"/></g>`
+      ? `<g class="radar__dot radar__dot--grey${off ? ' radar__dot--off' : ''}" style="--i:${i}"><circle cx="${f(x)}" cy="${f(y)}" r="${r}"/></g>`
       : `<g class="radar__dot" style="--i:${i}"><rect x="${f(x - r)}" y="${f(y - r)}" width="${f(2 * r)}" height="${f(2 * r)}" style="fill:${col(a.pi)}" transform="rotate(45 ${f(x)} ${f(y)})"/></g>`;
     const c = Math.cos(ang(i));
     const vertical = Math.abs(c) < 0.1;
@@ -83,8 +84,8 @@ export function radarSVG(model, result, { size = 640, animate = true, labels = '
     const [lx, ly] = pt(i, R * (vertical ? 1.24 : 1.17 + 0.1 * (1 - Math.abs(c)) ** 2));
     const anchor = vertical ? 'middle' : c > 0 ? 'start' : 'end';
     const name = labels === 'id' ? a.d.id.replace('D', '') : a.d.label || a.d.name;
-    const val = grey ? '?' : levelOf(a.dr.score);
-    s += `<text class="radar__label${grey ? ' radar__label--grey' : ''}${labels === 'id' ? ' radar__label--id' : ''}" x="${f(lx)}" y="${f(ly)}" text-anchor="${anchor}" dominant-baseline="middle">${esc(name)} <tspan class="radar__val" style="fill:${grey ? 'var(--grey)' : col(a.pi)}">${val}</tspan></text>`;
+    const mark = off ? '' : grey ? ' ?' : '';
+    s += `<text class="radar__label${grey ? ' radar__label--grey' : ''}${labels === 'id' ? ' radar__label--id' : ''}" x="${f(lx)}" y="${f(ly)}" text-anchor="${anchor}" dominant-baseline="middle">${esc(name)}${mark}</text>`;
   });
   for (const b of pills) {
     const x = cx + Math.cos(b.mid) * b.Rb;

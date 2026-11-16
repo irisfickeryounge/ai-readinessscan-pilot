@@ -95,3 +95,10 @@
   .prios__intro { font-size: 10pt; }
   .dim__block p + p { margin-top: 3px; }
 }
+
+/* Staven in de pdf: kleur afdrukken, geen animatie, iets lager. */
+@media print {
+  .bar__fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; animation: none; }
+  .bar__track { height: 110px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bars { break-inside: avoid; }
+}

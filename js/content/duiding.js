@@ -16,7 +16,7 @@ export const DIM = {
     text: `AI levert pas iets op als je weet waarvoor je het inzet. Uit interviews met Nederlandse mkb-experts komt steeds hetzelfde beeld: AI wordt te vaak een doel op zich, terwijl het een middel hoort te zijn. Trajecten lopen dan niet vast op de techniek, maar op de vraag wat de organisatie er eigenlijk aan heeft. Een doel hoeft geen dik plan te zijn. Eén zin over wat er beter moet worden, is genoeg om keuzes aan te toetsen. En besluiten om iets níet met AI te doen, is ook een goede uitkomst.`,
     stand: [
       `Jullie voelen dat je iets met AI moet, maar nog niet wat. Dat is een gewoon beginpunt. Het risico is dat je tools gaat proberen zonder te weten wanneer je tevreden bent.`,
-      `Er zijn ideeën, en dat is winst. Zolang er niets gekozen is, trekt ieder een eigen kant op en blijft het bij losse proefjes.`,
+      `Er zijn ideeën, en dat is winst. Zolang er niets gekozen is, trekt ieder een eigen kant op en blijft het bij losse pilots.`,
       `Jullie hebben gekozen, en daardoor kun je nee zeggen tegen wat niet past. Een doel dat nooit meer ter sprake komt, verliest wel snel zijn waarde.`,
       `Jullie doel leeft: het is bijgesteld op wat de praktijk liet zien. Zo hoort het.`,
     ],
@@ -313,8 +313,8 @@ export const DIM = {
       { doen: `Maak een eenvoudige som voor één toepassing. Wat levert die op in uren of geld, en wat kost hij? Spreek ook af waar de vrijgekomen tijd naartoe gaat, bijvoorbeeld meer tijd voor klanten of minder overwerk.`,
         begin: `Kies de toepassing die het meest wordt gebruikt, en zet opbrengst en kosten naast elkaar op een half A4.`,
         klaar: `Je kunt in twee zinnen uitleggen wat de toepassing oplevert en wat hij kost.` },
-      { doen: `Gebruik de cijfers om te besluiten. Geef elke proef een einddatum, en spreek vooraf af wanneer je doorgaat, bijstuurt of stopt. Op tijd stoppen is ook een goed resultaat.`,
-        begin: `Kies één lopende proef en zet een datum in de agenda waarop jullie aan de hand van de cijfers besluiten.`,
+      { doen: `Gebruik de cijfers om te besluiten. Geef elke pilot een einddatum, en spreek vooraf af wanneer je doorgaat, bijstuurt of stopt. Op tijd stoppen is ook een goed resultaat.`,
+        begin: `Kies één lopende pilot en zet een datum in de agenda waarop jullie aan de hand van de cijfers besluiten.`,
         klaar: `Er is een besluit genomen waarbij de cijfers op tafel lagen, en dat besluit is vastgelegd.` },
     ],
     top: `Kijk ook naar wat cijfers niet laten zien, zoals de kwaliteit van het werk en wat het met mensen doet. Praat net zo open over proeven die je hebt gestopt als over proeven die slaagden.`,
@@ -389,23 +389,23 @@ export const DIM = {
   'D5.4': {
     text: `Een agent is AI die zelf stappen zet: een mail versturen, een afspraak boeken, gegevens aanpassen. Dan is de vraag niet meer of het antwoord klopt, maar wat de agent mag doen zonder dat er iemand meekijkt. In een enquête van een adviesbureau onder leidinggevenden zei 40 procent dat AI bij hen deels zonder menselijke goedkeuring handelt. Een bruikbare indeling heeft vier treden: de agent informeert, doet een voorstel, voert uit binnen grenzen, of handelt zelfstandig. Onafhankelijk onderzoek naar agents is er nog weinig, en veel van wat erover wordt geschreven komt van leveranciers. Juist daarom is het verstandig klein te beginnen, en pas als de basis staat.`,
     stand: [
-      `Er is nog niets afgesproken. Een agent doet dan wat technisch kan, en niet wat jullie verantwoord vinden.`,
+      `Er is geen overzicht en er is niets afgesproken. Een agent doet dan wat technisch kan, en niet wat jullie verantwoord vinden.`,
       `Wie een agent instelt, bepaalt zelf wat hij mag. Het hangt af van één persoon, en de rest weet het niet.`,
-      `Per agent is afgesproken wat hij zelf mag en wanneer een mens akkoord geeft. Dat is de kern van grip op agents.`,
-      `Jullie hebben de grenzen aangepast door wat je in de praktijk zag. Zo groeit het vertrouwen op basis van ervaring.`,
+      `Jullie weten wie agents gebruikt en waarvoor. Dat overzicht is de basis. Wat een agent zelfstandig mag, is nog niet per agent afgesproken.`,
+      `Per agent is afgesproken wat hij zelfstandig mag en wanneer een mens akkoord geeft. Dat is de kern van grip op agents.`,
     ],
     stap: [
       { doen: `Breng in kaart welke toepassingen bij jullie zelf iets doen, ook als dat een functie is in software die je al had. Schrijf per agent op wat hij kan: lezen, voorstellen of uitvoeren.`,
         begin: `Vraag deze week aan wie agents heeft ingesteld om te laten zien wat ze doen, en wat er zonder tussenkomst gebeurt.`,
         klaar: `Je hebt een lijstje van agents, met per agent wat hij zelfstandig doet.` },
+      { doen: `Maak het overzicht compleet en deel het. Leg vast wie welke agent gebruikt, waarvoor, en wat die agent zelfstandig doet. Zorg dat niet alleen de maker het weet.`,
+        begin: `Vraag deze week aan iedereen die een agent heeft ingesteld om hem in één regel te beschrijven: wat doet hij, en voor wie?`,
+        klaar: `Er is één lijst van agents die de leiding kent, met per agent een eigenaar.` },
       { doen: `Spreek per agent af waar de grens ligt. Wat mag hij zelf, en waarvoor geeft eerst een mens akkoord? Laat een agent beginnen met voorstellen doen, en geef pas ruimte om uit te voeren als dat goed gaat. Zorg dat iemand weet hoe je hem stilzet.`,
         begin: `Kies de agent die het meest kan en schrijf in drie regels op wat hij mag, wat niet, en wie hem kan stilzetten.`,
         klaar: `Voor elke agent staat op papier wat hij mag en wie erover gaat, en het stilzetten is één keer geprobeerd.` },
-      { doen: `Kijk terug en stel bij. Loop na een paar maanden na wat de agent deed, waar het misging en waar de grens te ruim of te krap was.`,
-        begin: `Bekijk voor één agent wat hij de afgelopen maand heeft gedaan, en vraag de gebruikers waar ze moesten ingrijpen.`,
-        klaar: `Bij minstens één agent zijn de grenzen aangepast, en je weet waarom.` },
     ],
-    top: `Geef een agent alleen toegang tot de gegevens die hij nodig heeft. Bewaar wat agents doen, zodat je achteraf kunt nagaan wat er gebeurde.`,
+    top: `Kijk na een paar maanden terug: wat deed de agent, waar ging het mis, en was de grens te ruim of te krap? Geef een agent alleen toegang tot de gegevens die hij nodig heeft. Bewaar wat agents doen, zodat je achteraf kunt nagaan wat er gebeurde.`,
     src: ['G10', 'S05', 'R08', 'M02', 'G07'],
   },
   'D6.1': {
@@ -508,10 +508,10 @@ export const GATE_WHY = {
   '6.2': `AI gaat niet vaak de fout in, maar als het misgaat bij iets belangrijks, kan het duur zijn. Mensen merken zulke fouten zelf slecht op. Zonder afspraak over wie controleert en wie mag ingrijpen, valt het laatste vangnet weg.`,
 };
 
-// Uitleg bij de rode vlaggen in de uitslag.
+// Uitleg bij de basis per pijler in de uitslag.
 export const FLAG_TEXT = {
-  intro: `Elke pijler heeft één vraag die een basisvoorwaarde meet. Staat die nog niet op orde, dan krijgt de pijler een rode vlag, ook als de rest goed scoort. De andere vragen kunnen dat niet goedmaken. Een pijler met een rode vlag wordt daarom hoogstens oranje.`,
-  why: 'Waarom dit een basisvoorwaarde is',
+  intro: `Elke pijler heeft één vraag naar de basis: datgene waar de rest van de pijler op voortbouwt. Hieronder staat waar die basis nog aandacht vraagt. Daar begin je mee.`,
+  why: 'Waarom dit de basis is',
   answer: 'Je antwoord',
   todo: 'Wat je kunt doen, staat hieronder bij je prioriteiten.',
   unknown: `Je weet nog niet hoe het hier staat. Zoek dat eerst uit. Dat is zelf al een eerste stap.`,

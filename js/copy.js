@@ -93,16 +93,16 @@ export const COPY = {
     title: 'Over jou',
     intro: 'Acht korte vragen. Ze tellen niet mee in je uitslag, maar helpen om de vragen en signalen op jou af te stemmen.',
     optional: 'optioneel',
-    workQuestionPlaceholder: 'Bijvoorbeeld: waar begin ik, zonder dat het een losse proef blijft?', // [CONCEPT]
+    workQuestionPlaceholder: 'Bijvoorbeeld: waar begin ik, zonder dat het een losse pilot blijft?', // [CONCEPT]
   },
   priority: {
     title: 'Waar wil je het eerst meer over weten?',
     intro: 'Deze pijler werken we op je uitslagscherm volledig uit. De andere vijf staan in het volledige rapport.',
   },
   pillar: {
-    gateLabel: 'Poortvraag',
+    gateLabel: 'Basisvraag',
     gateHelp:
-      'Een harde voorwaarde. Staat deze vraag op 0, 1 of "weet ik niet", dan kan de pijler hoogstens oranje worden en krijg je een rode vlag.',
+      'Deze vraag gaat over de basis van deze pijler. De andere onderdelen bouwen erop voort.',
     autoNA: {
       solo: 'Niet van toepassing, omdat je zzp/solo werkt.',
       agents: 'Niet van toepassing, omdat je aangaf geen agents te gebruiken.',
@@ -117,12 +117,13 @@ export const COPY = {
   levels: { unknown: 'Weet ik niet', na: 'Niet van toepassing' },
   result: {
     title: 'Je uitslag',
-    webTitle: (n) => (n === 22 ? 'Je profiel op 22 dimensies' : `Je profiel op ${n} van de 22 dimensies`),
+    webTitle: () => 'Je profiel op 22 dimensies',
     webTitleNote: 'De rest is niet van toepassing.',
-    webHelp: 'Elk punt is één dimensie, gegroepeerd per pijler. Hoe verder naar buiten, hoe verder je bent. De drie ringen zijn de niveaus 1, 2 en 3. Een vraagteken betekent: nog niet in beeld.',
+    webHelp: 'Elk punt is één dimensie, gegroepeerd per pijler. Hoe verder naar buiten, hoe verder je bent. De drie ringen zijn de niveaus 1, 2 en 3. Een vraagteken betekent: nog niet in beeld. Een onderdeel dat voor jou niet van toepassing is, staat in het midden.',
     thermoTitle: 'Je zes pijlers in één oogopslag',
-    flagsTitle: 'Rode vlaggen',
-    flagsNone: 'Geen rode vlaggen. De basisvoorwaarden in alle pijlers staan op orde, of zijn niet van toepassing.',
+    flagsTitle: 'De basis op orde',
+    flagsNone: 'In alle pijlers staat de basis op orde, of is ze niet van toepassing.',
+    starLegend: 'de basis vraagt nog aandacht',
     aiActTitle: 'Signalen uit de AI-verordening',
     aiActNote: 'Deze signalen zijn niet gescoord en geen juridisch oordeel.',
     detailTitle: (name) => `Uitgewerkt: ${name}`,
@@ -141,7 +142,7 @@ export const COPY = {
     disabled: 'niet van toepassing',
   },
   statusLong: {
-    green: 'Staat stevig',
+    green: 'Dit staat',
     orange: 'Op weg',
     red: 'Hier ligt je eerstvolgende winst',
     grey: 'Nog niet in beeld',
@@ -156,7 +157,7 @@ export const COPY = {
     done: 'Het is gelukt als',
     target: 'Je werkt toe naar',
     talk: 'Om verder te bespreken',
-    gateNote: 'Basisvoorwaarde van deze pijler',
+    gateNote: 'De basis van deze pijler',
     level: (n) => `Niveau ${n} van 3`,
   },
   // De drie prioriteiten bovenaan de uitslag. [CONCEPT]
@@ -166,9 +167,9 @@ export const COPY = {
       n === 1
         ? 'Eén onderdeel vraagt nu je aandacht. De eerste stap kun je deze week al zetten.'
         : `Deze ${n === 2 ? 'twee' : 'drie'} onderdelen vragen als eerste je aandacht. Begin bovenaan: de eerste stap van nummer 1 kun je deze week al zetten.`,
-    how: 'Zo is dit gekozen: eerst de basisvoorwaarden die nog niet op orde zijn, dan het laagste onderdeel in de pijler die jij koos, en daarna je laagste onderdelen in de andere pijlers.',
+    how: 'Zo is dit samengesteld: eerst de basis die nog niet op orde is, dan het laagste onderdeel in de pijler die jij koos, en daarna je laagste onderdelen in de andere pijlers.',
     reason: {
-      flag: 'basisvoorwaarde, nog niet op orde',
+      flag: 'de basis van deze pijler',
       priorityPillar: 'laagste onderdeel in de pijler die jij koos',
       lowest: 'een van je laagste onderdelen',
     },

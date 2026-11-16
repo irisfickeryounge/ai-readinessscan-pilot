@@ -1,6 +1,6 @@
 // Bouwstenen voor uitslag én rapport (HTML-strings). Eén renderer voor scherm en pdf.
 import { COPY } from '../copy.js';
-import { pillarIcon, shortLabel } from './pillar-art.js';
+import { pillarIcon, shortLabel, gviStar } from './pillar-art.js';
 import { DIM, GATE_WHY, FLAG_TEXT, GREY_ADVICE } from '../content/duiding.js';
 import { questionText, effectiveAnswer, dimLevel } from '../engine.js';
 
@@ -33,33 +33,29 @@ export function answerLabel(model, q, a) {
 // ---------- pijleroverzicht (in één oogopslag) ----------
 
 export function thermometers(model, result) {
+  // Besluit Iris 16-11-2026: zes staven naast elkaar, per pijler alleen score, kleur en naam (met sterretje als de basis aandacht vraagt).
   const t = result.cfg.thresholds;
-  return `<ul class="thermos">${model.pillars
+  return `<ol class="bars">${model.pillars
     .map((p, i) => {
       const r = result.pillars[i];
-      const grey = r.color === 'grey' || r.status === 'disabled';
+      const off = r.status === 'disabled';
+      const grey = r.color === 'grey' || off;
       const val = grey ? null : r.score;
-      const status = grey ? COPY.status.grey : COPY.status[r.color];
-      return `<li class="thermo thermo--${r.color || 'disabled'} pc${i + 1}">
-        <span class="thermo__icon ptile__icon">${pillarIcon(p.id, { size: 20 })}</span>
-        <div class="thermo__body">
-          <div class="thermo__head"><span class="thermo__name">${esc(p.name)}</span>
-            <span class="thermo__score">${val === null ? '?' : val}</span><span class="thermo__status">${esc(status)}</span></div>
-          <div class="thermo__track" role="img" aria-label="${esc(p.name)}: ${val === null ? 'nog niet in beeld' : `${val} van 100, ${status}`}${r.gate?.triggered ? ', rode vlag' : ''}">
-            <span class="thermo__fill" style="--w:${val ?? 100}%"></span>
-            <span class="thermo__mark" style="left:${t.red}%"></span><span class="thermo__mark" style="left:${t.green}%"></span>
-          </div>
-          ${r.capped || r.gate?.triggered ? `<div class="thermo__foot">${r.gate?.triggered ? '<span class="flag-pill">rode vlag</span>' : ''}${r.capped ? ' <span class="thermo__note">begrensd door de poortvraag</span>' : ''}</div>` : ''}
-        </div>
+      const status = off ? COPY.status.disabled : grey ? COPY.status.grey : COPY.status[r.color];
+      const star = r.gate?.triggered;
+      return `<li class="bar bar--${r.color || 'disabled'}">
+        <span class="bar__score">${val === null ? (off ? '–' : '?') : `${val}<small>/100</small>`}</span>
+        <span class="bar__track" role="img" aria-label="${esc(p.name)}: ${val === null ? status : `${val} van 100, ${status}`}${star ? ', de basis vraagt nog aandacht' : ''}"><span class="bar__fill" style="--h:${val ?? 100}%"></span></span>
+        <span class="bar__name">${esc(p.name)}${star ? `&nbsp;${gviStar({ size: 13 })}` : ''}</span>
       </li>`;
     })
-    .join('')}</ul>
-    <p class="thermo__scale" aria-hidden="true"><span>0</span><span style="left:${t.red}%">${t.red}</span><span style="left:${t.green}%">${t.green}</span><span style="left:100%">100</span></p>
+    .join('')}</ol>
     <ul class="statlegend" aria-label="Legenda">
       <li class="statlegend--red"><i aria-hidden="true"></i>rood 0–${t.red - 1}</li>
       <li class="statlegend--orange"><i aria-hidden="true"></i>oranje ${t.red}–${t.green - 1}</li>
       <li class="statlegend--green"><i aria-hidden="true"></i>groen ${t.green}–100</li>
       <li class="statlegend--grey"><i aria-hidden="true"></i>grijs: nog niet in beeld</li>
+      ${result.pillars.some((r) => r.gate?.triggered) ? `<li class="statlegend--star">${gviStar({ size: 12 })}${COPY.result.starLegend}</li>` : ''}
     </ul>`;
 }
 
@@ -134,7 +130,7 @@ export function firstStepText(model, result) {
   return `${d.name}. ${a.doen}\n${COPY.card.week}: ${a.begin}`;
 }
 
-// ---------- rode vlaggen: uitleg ----------
+// ---------- de basis op orde: uitleg bij basisvoorwaarden die nog aandacht vragen ----------
 
 export function flagsBlock(model, result) {
   const items = result.redFlags.map((f) => {
@@ -143,7 +139,7 @@ export function flagsBlock(model, result) {
     const q = questionModel(model, f.questionId);
     const unknown = f.answer === 'unknown' || f.answer === undefined;
     return `<li class="flag">
-      <p class="flag__head"><span class="flag-pill">rode vlag</span> <strong>${esc(p.name)}</strong> · ${esc(d.name)}</p>
+      <p class="flag__head">${gviStar({ size: 14 })} <strong>${esc(d.name)}</strong> · ${esc(p.name)}</p>
       <p class="flag__q">${esc(questionText(q, result.derived))}</p>
       <p class="small"><span class="flag__label">${FLAG_TEXT.answer}:</span> ${esc(unknown ? COPY.levels.unknown : q.anchors[f.answer])}</p>
       <p><span class="flag__label">${FLAG_TEXT.why}:</span> ${esc(GATE_WHY[q.id] || '')}${unknown ? ` ${esc(FLAG_TEXT.unknown)}` : ''}</p>
@@ -172,7 +168,7 @@ export function pillarDetail(model, result, state, pillarId, { headingLevel = 3,
     .map((d, di) => {
       const dr = r.dimensions[di];
       const q = d.questions[0];
-      const gateMark = q.gate ? ` <span class="gate" title="${esc(COPY.card.gateNote)}">★<span class="sr-only"> ${esc(COPY.card.gateNote)}</span></span>` : '';
+      const gateMark = q.gate ? ` <span class="gate" title="${esc(COPY.card.gateNote)}">${gviStar({ size: 13 })}<span class="sr-only"> ${esc(COPY.card.gateNote)}</span></span>` : '';
       if (dr.status === 'disabled') {
         return `<li class="dim dim--disabled"><div class="dim__head"><${h} class="dim__name">${esc(shortLabel(d))}${gateMark}</${h}>${badge(null)}</div>
           <p class="dim__full muted small">${esc(questionText(q, result.derived))}</p></li>`;
@@ -188,7 +184,7 @@ export function pillarDetail(model, result, state, pillarId, { headingLevel = 3,
         : '';
       return `<li class="dim dim--${dr.color}">
         <div class="dim__head"><${h} class="dim__name">${esc(shortLabel(d))}${gateMark}</${h}>
-          ${levelSteps(level)}<span class="dim__level">${known ? COPY.card.level(level) : '?'}</span>${badge(dr.color, { long: true })}</div>
+          ${levelSteps(level)}${badge(dr.color, { long: true })}</div>
         <p class="dim__full muted small">${esc(d.name)} · <em>${esc(d.term)}</em></p>
         <div class="dim__block"><span class="dim__label">${COPY.card.meaning}</span><p>${esc(c.text || '')}</p></div>
         <div class="dim__block dim__block--now"><span class="dim__label">${COPY.card.now}</span>
@@ -202,12 +198,11 @@ export function pillarDetail(model, result, state, pillarId, { headingLevel = 3,
     .join('');
   const g = p.dimensions.find((d) => d.questions[0].gate);
   return `<div class="pdetail pc${pi + 1}">
-    <div class="pdetail__head"><span class="ptile__icon ptile__icon--s">${pillarIcon(p.id, { size: 18 })}</span>${badge(r.color)} <span class="pdetail__score">${r.color === 'grey' ? 'nog niet in beeld' : r.status === 'disabled' ? '' : `${r.score}/100`}</span>
-      ${r.capped ? '<span class="thermo__note">begrensd door de poortvraag</span>' : ''}</div>
+    <div class="pdetail__head"><span class="ptile__icon ptile__icon--s">${pillarIcon(p.id, { size: 18 })}</span><span class="pdetail__score pdetail__score--${r.color || 'disabled'}">${r.color === 'grey' ? 'nog niet in beeld' : r.status === 'disabled' ? 'niet van toepassing' : `${r.score} van 100`}</span></div>
     <p class="pdetail__approach">${esc(p.intro || p.approach)}</p>
     ${result.derived.isSolo && p.zzpNote ? `<p class="note">${esc(p.zzpNote)}</p>` : ''}
     <ul class="dims">${dims}</ul>
-    ${g ? `<div class="gatenote"><p><strong>★ ${esc(g.name)} is de basisvoorwaarde van deze pijler.</strong> Staat het antwoord op 0, 1 of "weet ik niet", dan krijgt de pijler een rode vlag en kan hij hoogstens oranje worden.</p><p>${esc(GATE_WHY[g.questions[0].id] || '')}</p></div>` : ''}
+    ${g ? `<div class="gatenote"><p><strong>${gviStar({ size: 13 })} ${esc(g.name)} is de basis van deze pijler.</strong> Staat het antwoord op 0, 1 of "weet ik niet", dan vraagt dit onderdeel als eerste je aandacht.</p><p>${esc(GATE_WHY[g.questions[0].id] || '')}</p></div>` : ''}
   </div>`;
 }
 
@@ -222,8 +217,8 @@ export function howItWorks(result) {
       <li><strong>Weet ik niet</strong> telt niet als nul. De dimensie is dan grijs: nog niet in beeld.</li>
       <li><strong>Niet van toepassing</strong> telt niet mee.</li>
       <li><strong>Pijler:</strong> het gemiddelde van de dimensies, omgerekend naar een score van 0 tot 100. Rood onder ${t.red}, oranje van ${t.red} tot en met ${t.green - 1}, groen vanaf ${t.green}. Grijs als meer dan een derde van de vragen "weet ik niet" is.</li>
-      <li><strong>Poortvraag (★):</strong> één basisvoorwaarde per pijler. Staat die op 0, 1 of "weet ik niet", dan is de pijler hoogstens oranje en krijg je een rode vlag.</li>
-      <li><strong>Waar je begint:</strong> eerst de rode vlaggen, met eigenaarschap en menselijk toezicht voorop. Dan het laagste onderdeel in de pijler die jij koos, en daarna je laagste onderdelen in de andere pijlers.</li>
+      <li><strong>De basis (${gviStar({ size: 12 })}):</strong> elke pijler heeft één vraag naar de basis. Staat die op 0, 1 of "weet ik niet", dan vraagt dat onderdeel als eerste je aandacht. Aan de score van de pijler verandert dat niets.</li>
+      <li><strong>Waar je begint:</strong> eerst de basis die nog niet op orde is, met eigenaarschap en menselijk toezicht voorop. Dan het laagste onderdeel in de pijler die jij koos, en daarna je laagste onderdelen in de andere pijlers.</li>
       <li><strong>Geen totaalscore.</strong> Een gemiddelde over zulke verschillende onderwerpen zou meer precisie suggereren dan er is.</li>
     </ul>
     <p class="muted small">De grenzen ${t.red} en ${t.green} zijn voorlopige ontwerpkeuzes; geen bron geeft onderbouwde afkapwaarden. We maken ze openbaar en herzien ze na de pilots.</p>

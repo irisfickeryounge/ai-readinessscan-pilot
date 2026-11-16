@@ -57,7 +57,7 @@ export function renderReport(model, result, state, bronnen, { summary = false } 
     <section class="rpage rappendix">
       <h2>Bijlage A · Je antwoorden</h2>
       ${contextTable(model, ctx)}
-      <p class="small muted">★ = poortvraag: een harde voorwaarde binnen de pijler.</p>
+      <p class="small muted">★ = de vraag naar de basis van de pijler.</p>
       ${answersTable(model, result, state)}
     </section>
 
