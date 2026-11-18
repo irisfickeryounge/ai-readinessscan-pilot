@@ -1,525 +1,442 @@
-// Duiding en advies per dimensie, uitleg per poortvraag. [CONCEPT] — herschreven in feedbackronde 3 (model v0.4).
-// Gevoed door het literatuurdossier (02_Verantwoording/literatuur/literatuur_per_dimensie.md).
-// Cijfers staan er alleen met de onderzochte groep bij. Enquêtes van adviesbureaus en leveranciers heten ook zo.
-// Per dimensie (elke dimensie heeft één vraag, dus het niveau van de dimensie is het gegeven antwoord):
-//   text  — wat dit onderdeel betekent voor een organisatie (lopende tekst)
-//   stand — vier zinnen: wat het betekent dat je op niveau 0, 1, 2 of 3 staat
-//   stap  — drie adviezen, voor de stap vanaf niveau 0, 1 en 2. Elk advies heeft:
-//             doen  — wat je doet
-//             begin — de kleinste eerste handeling, te doen in deze week
-//             klaar — waaraan je ziet dat het gelukt is
-//   top   — wat je doet als je op niveau 3 staat: vasthouden en verbreden
-//   src   — bronpakketten waar de tekst op leunt (voor de instrumentverantwoording)
-
+// © 2026 Global Voice Intelligence · Iris Ficker Younge. Alle rechten voorbehouden.
+// Publieke kopie: alleen de adviezen die de samenvatting toont. De volledige duiding staat niet online.
 export const DIM = {
-  'D1.1': {
-    text: `AI levert pas iets op als je weet waarvoor je het inzet. Uit interviews met Nederlandse mkb-experts komt steeds hetzelfde beeld: AI wordt te vaak een doel op zich, terwijl het een middel hoort te zijn. Trajecten lopen dan niet vast op de techniek, maar op de vraag wat de organisatie er eigenlijk aan heeft. Een doel hoeft geen dik plan te zijn. Eén zin over wat er beter moet worden, is genoeg om keuzes aan te toetsen. En besluiten om iets níet met AI te doen, is ook een goede uitkomst.`,
-    stand: [
-      `Jullie voelen dat je iets met AI moet, maar nog niet wat. Dat is een gewoon beginpunt. Het risico is dat je tools gaat proberen zonder te weten wanneer je tevreden bent.`,
-      `Er zijn ideeën, en dat is winst. Zolang er niets gekozen is, trekt ieder een eigen kant op en blijft het bij losse pilots.`,
-      `Jullie hebben gekozen, en daardoor kun je nee zeggen tegen wat niet past. Een doel dat nooit meer ter sprake komt, verliest wel snel zijn waarde.`,
-      `Jullie doel leeft: het is bijgesteld op wat de praktijk liet zien. Zo hoort het.`,
-    ],
-    stap: [
-      { doen: `Haal de ideeën boven tafel. Vraag een paar collega's welk werk hen de meeste tijd of ergernis kost, en of AI daar zou kunnen helpen.`,
-        begin: `Zet deze week een halfuur in de agenda met twee collega's en schrijf alle ideeën op, zonder ze te beoordelen.`,
-        klaar: `Je hebt een lijstje van vijf tot tien ideeën, met bij elk idee het probleem dat het oplost.` },
-      { doen: `Kies. Schrijf in één zin op wat jullie met AI willen bereiken en welk doel van de organisatie dat dient. Leg ook vast wat je voorlopig laat liggen, want dat scheelt steeds dezelfde discussie.`,
-        begin: `Leg je ideeën naast je jaarplan en streep door wat daar niet aan bijdraagt.`,
-        klaar: `Een collega die er niet bij was, kan in eigen woorden zeggen waarvoor jullie AI inzetten.` },
-      { doen: `Kijk na een paar maanden of het doel nog klopt met wat je ziet gebeuren. Wat werkte, wat viel tegen, en wat schrap je?`,
-        begin: `Zet nu alvast een datum in de agenda, over drie maanden, om het doel opnieuw te bekijken.`,
-        klaar: `Je kunt één ding noemen dat jullie hebben aangepast of geschrapt, en waarom.` },
-    ],
-    top: `Houd het doel twee keer per jaar tegen het licht, zeker als er nieuwe tools bij komen. Vertel nieuwe collega's niet alleen wat jullie met AI doen, maar ook wat jullie bewust niet doen.`,
-    src: ['R01', 'G06', 'G01', 'M01'],
-  },
-  'D1.2': {
-    text: `Zolang niemand over AI gaat, kan niemand beslissen wat doorgaat en niemand ingrijpen als het misgaat. Een naam alleen is niet genoeg. In een enquête onder 351 organisaties wereldwijd, vooral grotere, had maar één op de zes een AI-rol die iets mag goedkeuren of tegenhouden. Bij bijna een derde mocht die persoon alleen adviseren. In een kleine organisatie is de eindverantwoordelijke vaak gewoon de directeur, en dat is prima. Het gaat erom dat iedereen weet wie het is, en dat die persoon mag beslissen. Daarom is AI Chefsache.`,
-    stand: [
-      `Er is nog niemand aangewezen. In de praktijk denkt iedereen dan dat een ander erover gaat.`,
-      `Een paar mensen trekken de kar, en dat enthousiasme is waardevol. Maar zonder mandaat kunnen ze niets afdwingen, en als zij vertrekken, vertrekt hun kennis mee.`,
-      `Er is iemand aangewezen, met taken en bevoegdheden. De vraag is nu of die rol ook werkt als het erop aankomt.`,
-      `Jullie eindverantwoordelijke heeft laten zien dat de rol echt is: er is een besluit genomen om iets aan te passen of te stoppen.`,
-    ],
-    stap: [
-      { doen: `Wijs één persoon aan, met naam. In een klein bedrijf mag dat de directeur zelf zijn. "Iedereen" of "IT" telt niet.`,
-        begin: `Zet het deze week op de agenda van het directie- of teamoverleg, met één vraag: wie gaat hierover?`,
-        klaar: `Als je drie medewerkers vraagt wie over AI gaat, noemen ze dezelfde naam.` },
-      { doen: `Maak het officieel. Spreek af wat de eindverantwoordelijke doet, hoeveel tijd ervoor is en wat die persoon mag beslissen, ook als dat betekent dat een toepassing wordt stilgezet.`,
-        begin: `Vraag de mensen die het nu trekken wat ze nodig hebben om het goed te kunnen doen, en wie van hen de rol wil.`,
-        klaar: `De rol staat op papier, al is het een halve pagina, en de rest van de organisatie weet ervan.` },
-      { doen: `Laat de rol werken. Spreek vaste momenten af waarop de eindverantwoordelijke vertelt wat er loopt, wat het oplevert en wat er misging. Neem dan ook besluiten: doorgaan, aanpassen of stoppen.`,
-        begin: `Zet AI als vast punt op de agenda van het overleg waar jullie ook over geld en mensen besluiten.`,
-        klaar: `Er is een besluit dat je kunt aanwijzen, met de datum en de reden erbij.` },
-    ],
-    top: `Regel een vervanger, zodat de rol niet aan één persoon hangt. Vraag af en toe aan een medewerker wie er volgens hem of haar over AI gaat. Is het antwoord anders dan je dacht, dan weet je wat je te doen staat.`,
-    src: ['G04', 'G05', 'G10', 'R03'],
-  },
-  'D1.3': {
-    text: `Leren werken met AI kost tijd, en vaak ook wat geld. Als het alleen tussendoor kan, blijft het de hobby van een paar liefhebbers. In Brits onderzoek onder kleine bedrijven zei 80 procent digitalisering cruciaal te vinden, terwijl maar een derde er de ruimte voor had. Wachten met investeren tot je zeker weet dat het iets oplevert, werkt ook niet. Zonder tijd om te proberen kom je dat nooit te weten. Het hoeft niet groot te zijn. Een klein, vast blok werkt beter dan één trainingsdag.`,
-    stand: [
-      `AI gebeurt nu tussendoor. Dan wint het dagelijkse werk het altijd, en leert niemand meer dan toevallig lukt.`,
-      `Er is af en toe iets, zoals een training. Dat helpt even, maar zonder vervolg zakt het weg.`,
-      `Er is geregeld tijd of geld. Omdat het niet vastligt, is het wel het eerste wat sneuvelt als het druk wordt.`,
-      `Tijd en geld voor AI liggen vast. Daarmee is het geen extraatje meer, maar gewoon werk.`,
-    ],
-    stap: [
-      { doen: `Maak een klein, vast blok vrij om met AI te oefenen op eigen werk. Liever elke week een uur dan één keer een hele dag.`,
-        begin: `Kies deze week één vast moment, bijvoorbeeld vrijdagochtend een uur, voor de mensen die al met AI werken.`,
-        klaar: `Het blok staat in de agenda en is drie keer achter elkaar doorgegaan.` },
-      { doen: `Maak van af en toe een gewoonte. Spreek een vast ritme af voor oefenen en leren, en een bedrag voor tools, zodat mensen niet zelf een abonnement hoeven te betalen.`,
-        begin: `Reken uit wat jullie het afgelopen jaar aan AI hebben uitgegeven, in geld en ruwweg in uren. Dat is je vertrekpunt.`,
-        klaar: `Iedereen die met AI werkt, weet hoeveel tijd ervoor is en wie over het budget gaat.` },
-      { doen: `Leg het vast in de begroting of het jaarplan. Tel ook de tijd mee die controleren en het werk aanpassen kost, want die is vaak groter dan de prijs van de licentie.`,
-        begin: `Zet bij de volgende begrotingsronde één regel voor AI op de lijst, met tools en leren apart.`,
-        klaar: `AI staat als eigen post in de begroting of het jaarplan.` },
-    ],
-    top: `Kijk elk jaar of de post nog klopt met wat AI oplevert. Schuif geld naar wat werkt en stop met wat niets brengt. Dan blijft de post een keuze en wordt hij geen gewoonte.`,
-    src: ['R04', 'R05', 'G07', 'G11'],
-  },
-  'D2.1': {
-    text: `De mensen die het werk doen, weten het best waar het knelt en waar AI zou kunnen helpen. TNO onderzocht vier Nederlandse organisaties die vooroplopen met AI. Waar het goed uitpakte, dachten de uitvoerders mee over het probleem en de oplossing. Toch gebeurt dat weinig: vooraf nadenken over wat AI met taken doet, bleek zeldzaam. Achteraf informeren is geen meedenken. Wie pas hoort wat er verandert als het besluit er ligt, gaat een tool eerder mijden of eromheen werken.`,
-    stand: [
-      `Medewerkers horen het als de keuze gemaakt is. Dat gaat snel, maar je mist wat zij weten over het werk, en je moet achteraf weerstand wegnemen.`,
-      `Soms denkt iemand mee, omdat die er zelf om vraagt. Je hoort dan vooral de enthousiaste collega's, en niet de mensen met zorgen.`,
-      `Jullie vragen mensen vooraf om mee te denken. Let erop dat ze ook terughoren wat er met hun inbreng is gedaan. Anders voelt het als een formaliteit.`,
-      `De inbreng van medewerkers heeft een keuze veranderd. Dan weten mensen dat meedenken zin heeft.`,
-    ],
-    stap: [
-      { doen: `Vraag bij de eerstvolgende keuze de mensen van wie het werk verandert wat zij ervan vinden, voordat je besluit. Luister eerst, en verdedig de tool nog niet.`,
-        begin: `Loop deze week langs bij twee collega's die ermee moeten gaan werken. Vraag welke taken ze graag kwijt willen, en welke juist niet.`,
-        klaar: `Je kunt twee dingen noemen die je van hen hoorde en zelf niet had bedacht.` },
-      { doen: `Maak er een vaste stap van. Spreek af dat er geen AI-toepassing wordt gekozen zonder dat de mensen die ermee werken zijn gehoord. Schrijf hun zorgen op en geef op elke zorg antwoord.`,
-        begin: `Zet bij het eerstvolgende voorstel voor een AI-tool één extra regel: wie hebben we gesproken, en wat zeiden ze?`,
-        klaar: `Bij de laatste keuze kun je laten zien wie er vooraf is gehoord.` },
-      { doen: `Laat zien wat er met de inbreng gebeurt. Vertel na elke keuze wat je hebt overgenomen, wat niet, en waarom. Kijk na een paar maanden samen terug: klopt het met wat we verwachtten?`,
-        begin: `Stuur na het eerstvolgende besluit een kort bericht naar de mensen die meedachten, met wat er met hun punten is gedaan.`,
-        klaar: `Je kunt een voorbeeld geven van een keuze die anders is uitgevallen door wat medewerkers zeiden.` },
-    ],
-    top: `Betrek ook de collega's die je minder vaak hoort, en de ondernemingsraad als die er is. Blijf terugblikken na elke invoering, want pas in gebruik zie je wat een tool met het werk doet.`,
-    src: ['M01', 'S05', 'G10', 'M02'],
-  },
-  'D2.2': {
-    text: `Dat een mens meekijkt met AI, beschermt alleen als die mens durft te zeggen dat iets niet klopt. Dat is minder vanzelfsprekend dan het lijkt. In experimenten nemen mensen foute AI-adviezen vaak gewoon over, zeker als ze weinig tijd hebben. In een casus bij de overheid viel de zin: als de AI A zegt, kost het moed om B te doen. En waar regels onwerkbaar voelen, werken mensen eromheen. In een veldstudie bij een groot adviesbureau gebeurde dat in ruim een derde van de teams. Durven twijfelen is dus geen kwestie van sfeer. Het bepaalt of je fouten te zien krijgt.`,
-    stand: [
-      `Mensen houden hun twijfel voor zich. Dan lijkt alles goed te gaan, terwijl je de fouten gewoon niet te horen krijgt.`,
-      `Een enkeling zegt er iets van. Het hangt nu af van karakter, en niet van hoe jullie het geregeld hebben.`,
-      `Mensen zeggen het, en er wordt geluisterd. Dat is veel waard. De volgende vraag is of er ook iets mee gebeurt.`,
-      `Wat mensen aankaarten, leidt tot aanpassingen. Zo blijft het de moeite waard om iets te zeggen.`,
-    ],
-    stap: [
-      { doen: `Zeg hardop dat twijfelen aan een AI-uitkomst gewenst is. Het helpt het meest als de leiding zelf het voorbeeld geeft, met een eigen twijfel of een eigen fout.`,
-        begin: `Vertel in het eerstvolgende teamoverleg over één keer dat AI er bij jou naast zat, en vraag wie zoiets herkent.`,
-        klaar: `In dat overleg heeft minstens één collega een eigen voorbeeld gedeeld.` },
-      { doen: `Geef twijfel een vaste plek. Dat kan een agendapunt zijn, een kanaal of een aanspreekpunt. Spreek af dat wie iets meldt, daar nooit op wordt afgerekend.`,
-        begin: `Zet "wat klopte er niet?" als vast punt van vijf minuten op de agenda van het teamoverleg.`,
-        klaar: `Er komen meldingen van verschillende mensen, en niet alleen van de vaste critici.` },
-      { doen: `Doe zichtbaar iets met wat mensen melden. Pas een werkwijze, een instructie of een regel aan, en vertel erbij dat dit door een melding komt.`,
-        begin: `Kies één melding van de afgelopen maand en spreek af wat jullie erdoor veranderen.`,
-        klaar: `Je kunt een aanpassing aanwijzen die er is gekomen doordat iemand iets aankaartte.` },
-    ],
-    top: `Meer meldingen is bij actief gebruik een goed teken. Kijk wel of iedereen evenveel durft, ook nieuwe collega's en mensen in een afhankelijke positie.`,
-    src: ['G07', 'R10', 'G08', 'R08', 'G02'],
-  },
-  'D2.3': {
-    text: `AI kan werk lichter en leuker maken, maar ook voller, eentoniger of minder eigen. Welke kant het op gaat, zie je alleen als je ernaar kijkt. TNO rapporteert, op basis van een landelijke enquête onder werknemers, dat 40 procent meer werk in dezelfde tijd kan doen en dat 27 procent meer toezicht ervaart. Tijdwinst is dus niet hetzelfde als beter werk. Naar wat AI op de lange duur met vakmanschap doet, is nog weinig onderzoek gedaan. Juist daarom loont het om er zelf bij stil te staan.`,
-    stand: [
-      `Jullie hebben hier nog niet bij stilgestaan, net als de meeste organisaties. Je merkt een verandering in werkdruk of vakmanschap dan pas op als iemand klaagt.`,
-      `Het komt ter sprake als iemand erover begint. Je hoort dan vooral wat schuurt, en mist wat er ongemerkt verschuift.`,
-      `Jullie bespreken het geregeld, met voorbeelden. Daarmee zie je meer dan de meeste organisaties.`,
-      `Jullie hebben de werkwijze aangepast op wat je zag. Dan gaat het gesprek ook ergens over.`,
-    ],
-    stap: [
-      { doen: `Vraag in het team welke taken mensen graag door AI laten doen, en welke juist niet. De antwoorden laten zien wat mensen waardevol vinden in hun werk.`,
-        begin: `Neem die ene vraag deze week mee naar het teamoverleg en schrijf de antwoorden op.`,
-        klaar: `Je hebt een lijstje met taken die mensen kwijt willen, en taken die ze zelf willen blijven doen.` },
-      { doen: `Maak er een terugkerend gesprek van. Bespreek een paar keer per jaar een recent stuk werk dat met AI is gemaakt. Werd het beter, sneller of juist vlakker? En wat deed het met de werkdruk?`,
-        begin: `Plan het eerste gesprek in en vraag één collega om een voorbeeld mee te nemen.`,
-        klaar: `Het gesprek heeft twee keer plaatsgevonden, met voorbeelden uit het eigen werk.` },
-      { doen: `Verbind er een gevolg aan. Spreek per taak af wat mensenwerk blijft, en pas de werkwijze aan waar AI het werk voller of schraler maakt.`,
-        begin: `Kies één taak waarover mensen in het laatste gesprek klaagden, en spreek af wat jullie anders gaan doen.`,
-        klaar: `Je kunt een afspraak of werkwijze noemen die is veranderd door zo'n gesprek.` },
-    ],
-    top: `Blijf het vragen, en ga het niet meten door mee te kijken. Controle op medewerkers kost meer vertrouwen dan het aan inzicht oplevert.`,
-    src: ['M01', 'R09', 'R11', 'M02'],
-  },
-  'D3.1': {
-    text: `Je kunt pas iets regelen rond AI als je weet wie het gebruikt. Dat zicht ontbreekt vaker dan leidinggevenden denken. In een Amerikaanse enquête van een adviesbureau schatte de directie dat 4 procent van de medewerkers AI voor een flink deel van het werk gebruikte. Volgens de medewerkers zelf was het 13 procent. Mensen gebruiken privé-accounts, en veel software heeft AI ingebouwd zonder dat iemand het zo noemt. De AI-verordening vraagt organisaties om maatregelen te nemen die de AI-geletterdheid van hun mensen ondersteunen. Dat lukt alleen als je weet over wie het gaat.`,
-    stand: [
-      `Jullie hebben geen beeld van wie met AI werkt. Grote kans dat het meer mensen zijn dan je denkt.`,
-      `De leiding heeft een globaal beeld. Dat beeld is bijna altijd te klein, want privégebruik en ingebouwde AI blijven buiten zicht.`,
-      `Er is een lijst van mensen of teams en hun tools. Daarmee kun je scholing en afspraken richten op wie het nodig heeft.`,
-      `Jullie houden de lijst bij. Zo blijft hij kloppen, ook als er mensen en tools bij komen.`,
-    ],
-    stap: [
-      { doen: `Vraag het gewoon, en zonder oordeel. Wie gebruikt welke AI-tool, en waarvoor? Neem privé-accounts mee, en de AI die al in je software zit.`,
-        begin: `Stel deze week één vraag in het teamoverleg, of stuur hem rond: welke AI-tools heb je de afgelopen maand voor je werk gebruikt?`,
-        klaar: `Je hebt van elk team een antwoord, ook van de mensen die zeggen dat ze niets gebruiken.` },
-      { doen: `Zet het op een lijst. Per persoon of team: welke tool, waarvoor, en met wat voor gegevens. Een spreadsheet is genoeg. Je lijst met abonnementen en je verwerkingsregister helpen om niets te missen.`,
-        begin: `Maak de lijst met wat je al weet, en laat twee collega's aanvullen wat ontbreekt.`,
-        klaar: `De lijst bestaat, en er is iemand bij wie nieuwe tools worden gemeld.` },
-      { doen: `Houd de lijst levend. Werk hem bij bij elke nieuwe tool en elke nieuwe collega, en loop hem één keer per jaar helemaal na. Neem ook freelancers en ingehuurde mensen mee.`,
-        begin: `Zet "AI-lijst bijwerken" op de checklist voor nieuwe medewerkers en voor nieuwe software.`,
-        klaar: `De lijst is bijgewerkt na de laatste wijziging in mensen of tools.` },
-    ],
-    top: `Gebruik de lijst als basis voor de rest: wie welke scholing nodig heeft, waar gevoelige gegevens in het spel zijn en waar toezicht nodig is.`,
-    src: ['R08', 'R03', 'R06', 'S05', 'M03'],
-  },
-  'D3.2': {
-    text: `Gebrek aan kennis is in onderzoek naar AI in het mkb de drempel die het vaakst wordt genoemd. Een basis is voor iedereen hetzelfde: hoe AI werkt, waar het misgaat, welke gegevens er niet in mogen en welke afspraken jullie hebben. De AI-verordening vraagt organisaties om hier maatregelen voor te nemen, zonder een aantal uren, een diploma of een vast niveau voor te schrijven. Eén cursus is niet genoeg, want de tools veranderen snel. De Autoriteit Persoonsgegevens noemt AI-geletterdheid een doorlopend proces. Wat het best blijft hangen, is oefenen op eigen werk.`,
-    stand: [
-      `Nog niemand heeft een introductie gehad. Mensen leren het dan van elkaar of al doende, met de fouten die daarbij horen.`,
-      `Een paar mensen hebben zelf iets gevolgd. De kennis zit dan bij de liefhebbers, en niet per se bij wie het meest met AI werkt.`,
-      `Iedereen die AI gebruikt, krijgt een basisintroductie. Daarmee heeft iedereen dezelfde basis. Kennis van vorig jaar veroudert alleen wel snel.`,
-      `Jullie hebben de introductie herhaald of vernieuwd. Zo blijft de basis gelijk lopen met de tools.`,
-    ],
-    stap: [
-      { doen: `Geef iedereen die AI gebruikt een korte introductie van een uur. Behandel hoe het werkt, waar het vaak fout gaat en welke gegevens er niet in mogen, met voorbeelden uit jullie eigen werk.`,
-        begin: `Vraag deze week de collega die er het meest van weet om drie voorbeelden te verzamelen: één waar AI goed hielp, en twee waar het misging.`,
-        klaar: `Er staat een datum voor de eerste sessie, en je weet wie erbij moeten zijn.` },
-      { doen: `Maak de introductie een vast onderdeel voor iedereen die met AI werkt, ook voor nieuwe collega's. Houd bij wie hem heeft gehad. Een lijstje met namen en data is genoeg.`,
-        begin: `Zet op een rij wie er met AI werkt, en streep af wie al iets heeft gevolgd. Wie overblijft, is je doelgroep.`,
-        klaar: `Iedereen die met AI werkt heeft de introductie gehad, en hij zit in het inwerkprogramma.` },
-      { doen: `Plan een herhaling. Loop één keer per jaar na wat er is veranderd in tools, regels en jullie eigen afspraken, en pas de introductie daarop aan. Kijk ook wat mensen per rol extra nodig hebben.`,
-        begin: `Vraag drie gebruikers wat ze in de introductie hebben gemist, of wat inmiddels niet meer klopt.`,
-        klaar: `Er is een vernieuwde versie gegeven, en je kunt zeggen wat er is veranderd.` },
-    ],
-    top: `Ga van basis naar rol. Een directeur, een dagelijkse gebruiker en de eindverantwoordelijke hebben elk iets anders nodig. Bewaar wat je hebt gedaan, want daarmee laat je zien dat je aan AI-geletterdheid werkt.`,
-    src: ['R01', 'R03', 'R08', 'R14', 'S03'],
-  },
-  'D3.3': {
-    text: `AI klinkt overtuigend, ook als het ernaast zit. In een onderzoek onder 319 kenniswerkers bleek dat mensen minder kritisch nadenken naarmate ze de AI voor een bepaalde taak meer vertrouwen. Wie vertrouwt op het eigen oordeel, controleert juist meer. Uitleg van de AI of een zekerheidsscore helpt daar in experimenten weinig tegen. Wat wel helpt, zijn vaste controlepunten bij uitkomsten die ertoe doen. Controleren kost tijd, en als die tijd er niet is, gebeurt het niet. Kritisch gebruik heeft niets met wantrouwen te maken. Het is een vaardigheid, die je kunt afspreken en oefenen.`,
-    stand: [
-      `Uitkomsten worden meestal overgenomen zoals ze zijn. Dat gaat vaak goed, tot het een keer misgaat bij iets wat ertoe doet.`,
-      `Het hangt af van de persoon. De kwaliteit van wat de deur uitgaat, verschilt dan per collega.`,
-      `Belangrijke uitkomsten controleren jullie op afgesproken punten. Daarmee is controleren geen kwestie van karakter meer.`,
-      `Jullie hebben de controle aangescherpt na een fout. Zo leert de organisatie, en niet alleen degene die de fout maakte.`,
-    ],
-    stap: [
-      { doen: `Spreek af dat uitkomsten die ertoe doen nooit ongelezen de deur uitgaan. Bepaal samen wat "ertoe doen" bij jullie betekent, bijvoorbeeld alles wat naar een klant gaat of waar een besluit op rust.`,
-        begin: `Vraag in het teamoverleg naar een voorbeeld waarin AI er duidelijk naast zat. Zulke voorbeelden maken alert zonder mensen bang te maken.`,
-        klaar: `Het team kan in één zin zeggen welke uitkomsten altijd worden nagelezen.` },
-      { doen: `Maak een korte, vaste controle voor belangrijke uitkomsten. Drie vragen zijn genoeg. Klopt de bron? Is er een tweede bron? Zou ik dit ook zo zeggen zonder AI? Spreek ook af wie controleert, en geef daar tijd voor.`,
-        begin: `Schrijf de controlevragen op met twee gebruikers, en zet ze bij jullie afspraken over AI.`,
-        klaar: `Bij een recent stuk werk kan de maker laten zien wat er is gecontroleerd.` },
-      { doen: `Leer van wat misgaat. Bespreek elke fout die erdoorheen glipte, en pas de controle aan. Test af en toe of de controle werkt, bijvoorbeeld door een uitkomst met een bewuste fout te laten nalopen.`,
-        begin: `Neem de laatste fout die jullie tegenkwamen en vraag: bij welke controlevraag hadden we dit kunnen zien?`,
-        klaar: `De controle is op minstens één punt aangepast, en je kunt zeggen waarom.` },
-    ],
-    top: `Spreek de controle af per soort taak, want een samenvatting vraagt iets anders dan een offerte. Houd rekening met de tijd die het kost. Die hoort bij de kosten van AI.`,
-    src: ['R10', 'R09', 'S02', 'G07'],
-  },
-  'D3.4': {
-    text: `Wie elke taak begint met een vraag aan AI, krijgt snel een antwoord, maar slaat het eigen denkwerk over. In een experiment met 199 deelnemers namen mensen minder vaak een fout AI-advies over als ze eerst zelf een antwoord moesten bedenken. Zo'n gewoonte voelt wel omslachtiger. De onderbouwing is hier nog jong: het gaat om experimenten en kleine studies, niet om onderzoek op de werkvloer. Toch is de gedachte goed te volgen. Je kunt een uitkomst alleen beoordelen als je zelf een idee hebt van wat goed is. En vakkennis die je nooit meer gebruikt, slijt.`,
-    stand: [
-      `De meesten vragen het eerst aan AI. Dat is begrijpelijk, want het gaat snel. Het risico is dat mensen een uitkomst niet meer kunnen wegen.`,
-      `Het verschilt per persoon. Sommigen schetsen eerst zelf, anderen niet, en niemand weet het van elkaar.`,
-      `Jullie hebben afgesproken om eerst zelf een schets of eerste versie te maken. Dat is een hoog niveau, dat weinig organisaties halen.`,
-      `Jullie hebben de afspraak aangepast aan wat in de praktijk werkt. Dan is het een werkwijze geworden, en geen regel op papier.`,
-    ],
-    stap: [
-      { doen: `Maak het bespreekbaar. Vraag hoe collega's AI gebruiken bij werk waar hun oordeel telt, zoals schrijven, analyseren of adviseren. Beginnen ze zelf, of begint AI?`,
-        begin: `Probeer het deze week zelf bij één taak. Schrijf eerst in vijf minuten je eigen opzet en vraag daarna pas AI om hulp. Vertel in het team wat het verschil was.`,
-        klaar: `Minstens twee collega's hebben het ook geprobeerd en hun ervaring gedeeld.` },
-      { doen: `Spreek het af voor de taken waar het ertoe doet. Niet voor alles, want bij een samenvatting of een vertaling is het zonde van de tijd. Kies samen de twee of drie soorten werk waar een eigen opzet eerst komt.`,
-        begin: `Maak met het team een lijstje: bij welk werk willen wij dat het eerste idee van een mens komt?`,
-        klaar: `De afspraak staat bij jullie andere afspraken over AI, met de taken erbij genoemd.` },
-      { doen: `Kijk of de afspraak werkt. Vraag na een paar maanden wie zich eraan houdt, waar het helpt en waar het alleen ophoudt. Pas de lijst met taken daarop aan.`,
-        begin: `Vraag drie collega's bij welke taak de afspraak hen helpt, en bij welke niet.`,
-        klaar: `De lijst met taken is minstens één keer bijgesteld.` },
-    ],
-    top: `Let op nieuwe collega's en beginners. Zij hebben het meeste aan AI, maar lopen ook het grootste risico dat ze het vak niet meer zelf leren. Laat hen af en toe een taak helemaal zonder AI doen.`,
-    src: ['R10', 'R11', 'S03'],
-  },
-  'D4.1': {
-    text: `Of AI iets oplevert, kun je alleen zien als je weet hoe het werk daarvoor liep. Die nulmeting ontbreekt bijna altijd. TNO keek bij vier Nederlandse organisaties die vooroplopen met AI, en maar één daarvan had harde cijfers. Op gevoel varen is riskant, want verwachtingen zijn bijna altijd te rooskleurig. In een enquête van een adviesbureau onder 3.500 leidinggevenden verwachtte 67 procent meer omzet door AI, terwijl 28 procent die ook zag. Een nulmeting hoeft niet ingewikkeld te zijn. Tel een week lang hoe lang een taak duurt en hoe vaak het misgaat. Je moet het wel vooraf doen, want achteraf kan het niet meer.`,
-    stand: [
-      `Er is niets vastgelegd over hoe het werk liep. Wat AI oplevert, blijft dan een kwestie van geloven.`,
-      `Jullie hebben er een gevoel bij. Dat gevoel zit er bij AI opvallend vaak naast, meestal aan de optimistische kant.`,
-      `Jullie hebben cijfers vastgelegd. Daarmee kun je straks laten zien wat er is veranderd.`,
-      `Jullie hebben opnieuw gemeten en vergeleken. Weinig organisaties kunnen dat zeggen.`,
-    ],
-    stap: [
-      { doen: `Kies één werkproces waar je AI voor gebruikt of wilt gebruiken, en schat hoe het nu loopt. Hoe lang duurt het, hoe vaak komt het voor, en hoe vaak gaat het mis?`,
-        begin: `Vraag deze week de twee mensen die dat werk doen om hun schatting, en schrijf die op met de datum erbij.`,
-        klaar: `Er staat een eerste schatting op papier voor één werkproces.` },
-      { doen: `Vervang het gevoel door cijfers. Kies één werkproces en houd een of twee weken bij hoe lang het duurt en hoe vaak er iets hersteld moet worden. Een turflijst is genoeg. Doe het voordat je iets verandert.`,
-        begin: `Maak een eenvoudige turflijst, en laat de mensen die het werk doen hem een week bijhouden.`,
-        klaar: `Je hebt cijfers van minstens een week, en je weet wanneer je opnieuw meet.` },
-      { doen: `Meet opnieuw, op dezelfde manier, als AI een tijd in gebruik is. Kijk niet alleen naar snelheid, maar ook naar fouten en naar de tijd die controleren kost.`,
-        begin: `Zet de datum van de tweede meting nu in de agenda, twee tot drie maanden na de start.`,
-        klaar: `Je hebt een vergelijking van voor en na, en je hebt er een besluit op genomen.` },
-    ],
-    top: `Maak er een gewoonte van om bij elke nieuwe toepassing eerst te meten. Bewaar de metingen, zodat je later kunt laten zien waarop een besluit is gebaseerd.`,
-    src: ['M01', 'G10', 'R09', 'R08', 'G11'],
-  },
-  'D4.2': {
-    text: `Zolang AI een persoonlijk hulpmiddel is, levert het hooguit wat tijdwinst per persoon op. Waarde voor de organisatie ontstaat pas als AI een vaste plek krijgt in het werk. In een enquête van een adviesbureau onder grote organisaties hadden de best presterende bedrijven hun werkprocessen ruim twee keer zo vaak opnieuw ingericht als de rest. Dat is een samenhang en geen bewijs, maar het patroon komt in meer bronnen terug. Er hoort een waarschuwing bij. Een rommelig proces wordt door AI niet beter. Het wordt sneller rommelig. Soms is eerst het proces op orde brengen de goede stap.`,
-    stand: [
-      `Mensen gebruiken AI voor zichzelf, buiten het zicht. Wat ze leren, blijft bij hen, en de organisatie kan er niet op bouwen.`,
-      `Mensen gebruiken AI voor zichzelf, en de leiding weet ervan. Het is zichtbaar, maar nog van niemand.`,
-      `In een deel van het werk is afgesproken welke stap AI doet. Daarmee is AI van een hulpmiddel een werkwijze geworden.`,
-      `Jullie hebben een werkproces aangepast toen bleek dat het anders beter werkte. Daar begint de echte opbrengst.`,
-    ],
-    stap: [
-      { doen: `Maak zichtbaar waar AI al wordt gebruikt. Vraag wie het waarvoor gebruikt en wat het oplevert. Je zoekt naar toepassingen waar meer mensen iets aan hebben.`,
-        begin: `Vraag deze week twee collega's om te laten zien hoe ze AI gebruiken bij een taak die anderen ook doen.`,
-        klaar: `Je kent drie manieren waarop AI nu in het werk wordt gebruikt, en je weet welke de moeite van het delen waard is.` },
-      { doen: `Kies één werkproces dat stabiel loopt, en spreek af welke stap AI doet en welke de mens. Schrijf het op van begin tot eind, met wie controleert.`,
-        begin: `Teken het gekozen proces in vijf tot acht stappen op één vel, samen met de mensen die het werk doen.`,
-        klaar: `Iedereen in dat proces werkt op dezelfde manier met AI, en een nieuwe collega kan het nalezen.` },
-      { doen: `Pas het proces aan. Kijk na een paar maanden welke stappen overbodig zijn geworden, waar dubbel werk zit en waar een controlepunt ontbreekt. AI bovenop het oude proces leggen levert weinig op.`,
-        begin: `Vraag de mensen in het proces welke stap ze nog doen omdat het altijd zo ging.`,
-        klaar: `Minstens één stap is geschrapt, verplaatst of toegevoegd, en je kunt zeggen wat dat opleverde.` },
-    ],
-    top: `Neem de aanpak mee naar een tweede werkproces. Kijk ook wie er het meest aan heeft. In onderzoek zijn dat vaak de minder ervaren collega's.`,
-    src: ['G10', 'R05', 'G06', 'R01', 'M01', 'R09'],
-  },
-  'D4.3': {
-    text: `De licentie is maar een deel van wat AI kost. Mensen moeten het leren, het werk moet worden aangepast en uitkomsten moeten worden gecontroleerd en verbeterd. Vooral die controletijd wordt vergeten. In een veldstudie bij een groot adviesbureau duurde een taak blijvend ongeveer 12 procent langer doordat uitkomsten werden nagekeken. Wie zegt dat AI tien procent tijd bespaart en de controle niet meetelt, rekent zich dus rijk. Een precieze som is niet nodig. Een eerlijke schatting van de uren is al veel beter dan alleen het abonnement tellen.`,
-    stand: [
-      `Jullie rekenen de kosten nog niet uit. Zolang het om een paar abonnementen gaat, valt dat niet op. Maar je kunt ook niet zeggen of het uit kan.`,
-      `Jullie tellen alleen de licentie. Dat is het kleinste deel. De uren van mensen zijn bijna altijd de grootste post.`,
-      `Jullie tellen ook de tijd voor leren en het werk aanpassen. Wat nog ontbreekt, is de tijd die controleren en corrigeren blijft kosten.`,
-      `Jullie tellen alles mee, ook controleren en corrigeren. Daarmee heb je een eerlijk beeld.`,
-    ],
-    stap: [
-      { doen: `Zet op een rij wat jullie aan AI uitgeven. Begin bij de abonnementen, ook de abonnementen die mensen zelf betalen of declareren.`,
-        begin: `Vraag deze week bij de administratie op welke AI-abonnementen er lopen en wat ze per maand kosten.`,
-        klaar: `Je hebt één bedrag per maand voor alle licenties samen.` },
-      { doen: `Tel de uren erbij. Hoeveel tijd ging er zitten in uitproberen, leren en het werk anders inrichten? Een ruwe schatting per persoon is genoeg.`,
-        begin: `Vraag drie gebruikers hoeveel uur ze de afgelopen maand kwijt waren aan leren en uitproberen.`,
-        klaar: `Naast het bedrag voor licenties staat een schatting van de uren.` },
-      { doen: `Tel ook de tijd die blijft terugkomen: uitkomsten nalezen, fouten herstellen, opnieuw vragen. Die tijd gaat van de winst af.`,
-        begin: `Laat twee collega's een week turven hoeveel tijd ze besteden aan het controleren en verbeteren van AI-uitkomsten.`,
-        klaar: `Je kunt per toepassing zeggen wat hij kost, met de controletijd erbij.` },
-    ],
-    top: `Zet de kosten naast de opbrengst bij elk besluit om door te gaan of te stoppen. Vergelijk af en toe met een oplossing zonder AI. Soms is die gewoon beter.`,
-    src: ['G07', 'R10', 'R08', 'G10', 'G11'],
-  },
-  'D4.4': {
-    text: `Veel organisaties gebruiken AI, maar weinig kunnen laten zien wat het oplevert. In een enquête van een adviesbureau onder ruim 1.700 grote organisaties gebruikte 88 procent AI, terwijl 39 procent enig effect op het bedrijfsresultaat zag. Een deel van de verklaring is eenvoudig. Tijd die vrijkomt, verdwijnt ongemerkt in ander werk als je niet afspreekt waar hij naartoe gaat. Een opbrengst hoeft niet altijd in euro's. Minder fouten, een kortere wachttijd of minder overwerk tellen ook. Het gaat erom dat je het kunt laten zien, en dat het meeweegt als je besluit om door te gaan of te stoppen.`,
-    stand: [
-      `Jullie kunnen nog niet laten zien wat AI oplevert. Dat geldt voor de meeste organisaties, maar het maakt elk besluit over AI een gok.`,
-      `Er is een gevoel dat het iets oplevert. Dat gevoel kan kloppen, maar je kunt er geen budget of besluit op verdedigen.`,
-      `Er is een globale berekening. Daarmee kun je het gesprek voeren over wat het waard is.`,
-      `De cijfers hebben meegewogen bij een besluit om door te gaan of te stoppen. Daar zijn ze voor.`,
-    ],
-    stap: [
-      { doen: `Kies één toepassing en vraag de gebruikers wat die hun oplevert. Hoeveel tijd scheelt het per week, en wat doen ze met die tijd?`,
-        begin: `Stel die twee vragen deze week aan drie mensen die dezelfde toepassing gebruiken.`,
-        klaar: `Je hebt voor één toepassing een schatting in uren per week, van de gebruikers zelf.` },
-      { doen: `Maak een eenvoudige som voor één toepassing. Wat levert die op in uren of geld, en wat kost hij? Spreek ook af waar de vrijgekomen tijd naartoe gaat, bijvoorbeeld meer tijd voor klanten of minder overwerk.`,
-        begin: `Kies de toepassing die het meest wordt gebruikt, en zet opbrengst en kosten naast elkaar op een half A4.`,
-        klaar: `Je kunt in twee zinnen uitleggen wat de toepassing oplevert en wat hij kost.` },
-      { doen: `Gebruik de cijfers om te besluiten. Geef elke pilot een einddatum, en spreek vooraf af wanneer je doorgaat, bijstuurt of stopt. Op tijd stoppen is ook een goed resultaat.`,
-        begin: `Kies één lopende pilot en zet een datum in de agenda waarop jullie aan de hand van de cijfers besluiten.`,
-        klaar: `Er is een besluit genomen waarbij de cijfers op tafel lagen, en dat besluit is vastgelegd.` },
-    ],
-    top: `Kijk ook naar wat cijfers niet laten zien, zoals de kwaliteit van het werk en wat het met mensen doet. Praat net zo open over proeven die je hebt gestopt als over proeven die slaagden.`,
-    src: ['S05', 'M01', 'G10', 'R12', 'G11'],
-  },
-  'D5.1': {
-    text: `Wat je in een AI-tool invoert, haal je er niet meer uit. En onder de AVG blijft je organisatie verantwoordelijk voor de gegevens van klanten en medewerkers, ook als ze bij een leverancier staan. Daarom is dit de basisvoorwaarde van deze pijler. Een regel hoeft niet ingewikkeld te zijn. Veel organisaties werken met drie kleuren: groen voor openbare informatie, oranje voor interne informatie en rood voor klant- en persoonsgegevens. Alleen verbieden werkt slecht. Zonder goed alternatief gaan mensen door met hun privé-account, en dan zie je het niet meer.`,
-    stand: [
-      `Er zijn nog geen regels. Mensen moeten dan zelf inschatten wat kan, en die inschatting verschilt per persoon.`,
-      `Het is mondeling besproken. Wie er die dag niet bij was, of later is gekomen, weet het niet.`,
-      `Het ligt vast welke gegevens er wel en niet in mogen. Dat is de basis waar de rest op rust.`,
-      `Jullie hebben de regels aangescherpt na een twijfelgeval. Zo sluiten ze aan op het echte werk.`,
-    ],
-    stap: [
-      { doen: `Maak één eenvoudige regel voor welke gegevens wel en niet in AI-tools mogen. Drie kleuren werken goed: groen voor openbaar, oranje voor intern, rood voor klant- en persoonsgegevens. Noem bij elke kleur voorbeelden uit jullie eigen werk.`,
-        begin: `Schrijf deze week de drie kleuren op met elk drie voorbeelden, en leg ze voor aan één collega die veel met AI werkt.`,
-        klaar: `De regel past op een half A4, en die collega vindt hem werkbaar.` },
-      { doen: `Leg vast wat jullie mondeling hebben besproken, en maak het bekend bij iedereen die AI gebruikt. Noem de tools bij naam: in welke tool mag wat? Zorg dat er een goedgekeurde tool is waarin mensen hun werk kunnen doen.`,
-        begin: `Schrijf de regel deze week op, zet hem op de plek waar jullie afspraken staan en bespreek hem in het eerstvolgende teamoverleg.`,
-        klaar: `Als je een gebruiker vraagt of een klantdossier in de AI-tool mag, krijg je zonder aarzelen het goede antwoord.` },
-      { doen: `Toets de regel aan de praktijk. Verzamel twijfelgevallen, bespreek ze en pas de regel of de voorbeelden aan. Ga bij je belangrijkste tool na wat de leverancier met je gegevens doet.`,
-        begin: `Vraag in het team naar één situatie waarin iemand twijfelde of iets erin mocht.`,
-        klaar: `De regel of de voorbeelden zijn aangepast door een geval uit de praktijk.` },
-    ],
-    top: `Herhaal de regel bij elke nieuwe tool en elke nieuwe collega. Sluit waar nodig een verwerkersovereenkomst af met de leverancier.`,
-    src: ['R05', 'R08', 'G07', 'G06', 'R03'],
-  },
-  'D5.2': {
-    text: `Als mensen elk hun eigen AI-tool kiezen, weet niemand wat er met de gegevens gebeurt en kan niemand elkaar helpen. Een korte lijst met goedgekeurde tools lost dat op, als die tools ook goed genoeg zijn om mee te werken. Een verbod zonder alternatief werkt averechts. Het gebruik gaat dan door, maar buiten het zicht. Voor een kleine organisatie draait de rest om gewone digitale hygiëne: zakelijke accounts, inloggen in twee stappen en rechten per rol. Onderzoek naar AI-tools in het mkb is er nog nauwelijks. Dit advies leunt op wat al langer bekend is over veilig werken met software.`,
-    stand: [
-      `Mensen gebruiken wat ze zelf handig vinden. Dat is vindingrijk, maar gegevens komen zo op plekken die niemand kent.`,
-      `Een deel van de tools is bekend, maar mensen gebruiken ook andere. Meestal omdat de goedgekeurde tool iets niet kan.`,
-      `Er is afgesproken welke tools mogen, en daar werken mensen mee. Dat geeft rust en overzicht.`,
-      `Jullie hebben de keuze herzien toen er betere of veiligere tools kwamen. Zo blijft de lijst bruikbaar.`,
-    ],
-    stap: [
-      { doen: `Breng in beeld welke AI-tools mensen gebruiken, en waarom juist die. Oordeel nog niet. Je wilt weten wat mensen nodig hebben, zodat je straks tools kiest waar ze ook mee willen werken.`,
-        begin: `Vraag deze week rond welke tools mensen nu gebruiken, en wat ze er fijn aan vinden.`,
-        klaar: `Je hebt een lijstje van de tools die in gebruik zijn, met waarvoor.` },
-      { doen: `Maak een keuze en regel de toegang. Spreek af welke één of twee tools mogen, geef mensen daar een zakelijk account voor en zet inloggen in twee stappen aan. Kies tools die goed genoeg zijn. Anders blijven mensen hun eigen account gebruiken.`,
-        begin: `Vraag de mensen die een andere tool gebruiken wat ze missen in de tools die jullie al kennen.`,
-        klaar: `Iedereen weet welke tools mogen en werkt met een zakelijk account. Voor uitzonderingen is er een afspraak.` },
-      { doen: `Houd de keuze actueel. Kijk een of twee keer per jaar of de tools nog passen bij het werk en bij jullie eisen aan veiligheid. Maak het makkelijk om een nieuwe tool voor te stellen.`,
-        begin: `Spreek af bij wie mensen een nieuwe tool kunnen voorstellen, en hoe snel ze antwoord krijgen.`,
-        klaar: `De lijst is minstens één keer herzien, en je kunt zeggen waarom.` },
-    ],
-    top: `Neem AI-tools op in je gewone afspraken over beveiliging. Loop af en toe na wie toegang heeft, zeker als mensen vertrekken.`,
-    src: ['R04', 'M03', 'G06', 'G05', 'M02'],
-  },
-  'D5.3': {
-    text: `De meeste organisaties maken AI niet zelf, maar kopen het in. Dan bepaalt de leverancier waar je gegevens staan, onder welk recht ze vallen en of ze worden gebruikt om modellen te trainen. Zelf doorlichten kun je zo'n dienst niet, en leveranciers zijn de laatste jaren minder open geworden over hun modellen. Wat je wel kunt, is het navragen en het laten meewegen bij je keuze. In Europa groeit de aandacht voor digitale soevereiniteit: de vraag of je zelf nog iets te zeggen hebt over je gegevens. Hard onderzoek is hier schaars. De vragen zelf zijn eenvoudig, en de antwoorden staan meestal in de voorwaarden.`,
-    stand: [
-      `Jullie hebben nog niet uitgezocht waar de gegevens blijven. Dat is niet erg, zolang je het uitzoekt voordat er gevoelige gegevens in gaan.`,
-      `Van een enkele tool weet iemand het. Het is kennis van één persoon, en geen overzicht.`,
-      `Van de belangrijkste tools weten jullie bij welke leverancier en in welk land de gegevens staan. Daarmee kun je een klant antwoord geven als die ernaar vraagt.`,
-      `Het heeft meegewogen bij een keuze. Dan is soevereiniteit geen woord meer, maar iets waarop je kiest.`,
-    ],
-    stap: [
-      { doen: `Zoek het uit voor je belangrijkste AI-tool. Waar worden de gegevens verwerkt en opgeslagen, en gebruikt de leverancier ze om te trainen? Het staat meestal in de voorwaarden of de privacyverklaring.`,
-        begin: `Open deze week de privacyverklaring van de tool die jullie het meest gebruiken, en zoek op "opslag", "verwerking" en "training".`,
-        klaar: `Je kunt voor die ene tool zeggen in welk land de gegevens staan en of ermee wordt getraind.` },
-      { doen: `Zoek voor al je belangrijke tools uit waar de gegevens staan, en zet het op een rij: leverancier, land, wel of niet trainen, en of er een verwerkersovereenkomst is. Vergeet de AI niet die in je gewone software zit.`,
-        begin: `Maak een lijst van je tools met vier kolommen: leverancier, land, training en overeenkomst. Vul eerst in wat je al weet.`,
-        klaar: `De lijst is ingevuld voor de tools waar klant- of persoonsgegevens in kunnen komen.` },
-      { doen: `Laat het meewegen. Vraag bij elke nieuwe tool waar de gegevens komen te staan, of er een Europees alternatief is en hoe je je gegevens terugkrijgt als je weg wilt.`,
-        begin: `Zet die drie vragen op het lijstje dat jullie gebruiken als je nieuwe software kiest.`,
-        klaar: `Bij de laatste keuze voor een tool zijn de vragen gesteld, en het antwoord is vastgelegd.` },
-    ],
-    top: `Bedenk bij je belangrijkste toepassing wat je doet als de leverancier stopt of de prijs verdubbelt. Probeer één keer of je je gegevens er echt uit krijgt.`,
-    src: ['G04', 'R05', 'S03', 'G11', 'R07'],
-  },
-  'D5.4': {
-    text: `Een agent is AI die zelf stappen zet: een mail versturen, een afspraak boeken, gegevens aanpassen. Dan is de vraag niet meer of het antwoord klopt, maar wat de agent mag doen zonder dat er iemand meekijkt. In een enquête van een adviesbureau onder leidinggevenden zei 40 procent dat AI bij hen deels zonder menselijke goedkeuring handelt. Een bruikbare indeling heeft vier treden: de agent informeert, doet een voorstel, voert uit binnen grenzen, of handelt zelfstandig. Onafhankelijk onderzoek naar agents is er nog weinig, en veel van wat erover wordt geschreven komt van leveranciers. Juist daarom is het verstandig klein te beginnen, en pas als de basis staat.`,
-    stand: [
-      `Er is geen overzicht en er is niets afgesproken. Een agent doet dan wat technisch kan, en niet wat jullie verantwoord vinden.`,
-      `Wie een agent instelt, bepaalt zelf wat hij mag. Het hangt af van één persoon, en de rest weet het niet.`,
-      `Jullie weten wie agents gebruikt en waarvoor. Dat overzicht is de basis. Wat een agent zelfstandig mag, is nog niet per agent afgesproken.`,
-      `Per agent is afgesproken wat hij zelfstandig mag en wanneer een mens akkoord geeft. Dat is de kern van grip op agents.`,
-    ],
-    stap: [
-      { doen: `Breng in kaart welke toepassingen bij jullie zelf iets doen, ook als dat een functie is in software die je al had. Schrijf per agent op wat hij kan: lezen, voorstellen of uitvoeren.`,
-        begin: `Vraag deze week aan wie agents heeft ingesteld om te laten zien wat ze doen, en wat er zonder tussenkomst gebeurt.`,
-        klaar: `Je hebt een lijstje van agents, met per agent wat hij zelfstandig doet.` },
-      { doen: `Maak het overzicht compleet en deel het. Leg vast wie welke agent gebruikt, waarvoor, en wat die agent zelfstandig doet. Zorg dat niet alleen de maker het weet.`,
-        begin: `Vraag deze week aan iedereen die een agent heeft ingesteld om hem in één regel te beschrijven: wat doet hij, en voor wie?`,
-        klaar: `Er is één lijst van agents die de leiding kent, met per agent een eigenaar.` },
-      { doen: `Spreek per agent af waar de grens ligt. Wat mag hij zelf, en waarvoor geeft eerst een mens akkoord? Laat een agent beginnen met voorstellen doen, en geef pas ruimte om uit te voeren als dat goed gaat. Zorg dat iemand weet hoe je hem stilzet.`,
-        begin: `Kies de agent die het meest kan en schrijf in drie regels op wat hij mag, wat niet, en wie hem kan stilzetten.`,
-        klaar: `Voor elke agent staat op papier wat hij mag en wie erover gaat, en het stilzetten is één keer geprobeerd.` },
-    ],
-    top: `Kijk na een paar maanden terug: wat deed de agent, waar ging het mis, en was de grens te ruim of te krap? Geef een agent alleen toegang tot de gegevens die hij nodig heeft. Bewaar wat agents doen, zodat je achteraf kunt nagaan wat er gebeurde.`,
-    src: ['G10', 'S05', 'R08', 'M02', 'G07'],
-  },
-  'D6.1': {
-    text: `Afspraken over AI geven mensen houvast: waarvoor mag ik het gebruiken, en waarvoor niet? Zonder afspraken beslist iedereen dat zelf. Het hoeft geen dik beleidsstuk te zijn. Eén A4 dat aansluit op wat je al hebt, zoals je privacybeleid, is genoeg. Er is wel een verschil tussen beleid hebben en beleid dat werkt. In een enquête van een softwareleverancier onder driehonderd leidinggevenden zei bijna negen op de tien dat er beleid was, terwijl ongeveer een derde kon laten zien dat het werd toegepast. En regels die mensen onwerkbaar vinden, worden omzeild. Vraag dus niet alleen of de afspraken bekend zijn, maar ook of ze werken.`,
-    stand: [
-      `Er zijn nog geen afspraken. Iedereen bepaalt dan zelf wat verstandig is, en dat valt per persoon anders uit.`,
-      `Er is weleens over gesproken, maar er ligt niets vast. Nieuwe collega's en mensen die er niet bij waren, weten het niet.`,
-      `De afspraken liggen vast. De vraag is nu of mensen ze kennen en ermee kunnen werken.`,
-      `Jullie hebben de afspraken aangepast na ervaringen uit de praktijk. Dan zijn het werkafspraken, en geen papier in een la.`,
-    ],
-    stap: [
-      { doen: `Schrijf op één A4 waarvoor jullie AI wel en niet gebruiken. Begin bij wat mensen nu al doen, en leg bij elke "niet" uit waarom. Afspraken met een reden worden beter gevolgd.`,
-        begin: `Schrijf deze week drie dingen op waarvoor AI bij jullie prima is, en drie waarvoor niet. Leg het voor aan twee collega's.`,
-        klaar: `Er ligt een eerste versie waar twee gebruikers op hebben gereageerd.` },
-      { doen: `Maak de afspraken officieel. Leg ze vast, sluit aan op je privacy- en IT-afspraken en bespreek ze met iedereen die AI gebruikt. Zorg dat mensen weten bij wie ze met een vraag terechtkunnen.`,
-        begin: `Schrijf deze week op wat jullie hebben besproken, en plan een kwartier in het teamoverleg om het door te nemen.`,
-        klaar: `Elke gebruiker weet waar de afspraken staan en kan er twee noemen.` },
-      { doen: `Vraag of de afspraken werken. Waar lopen mensen tegenaan, welke regel wordt stilletjes overgeslagen, en wat ontbreekt? Pas aan wat niet werkt.`,
-        begin: `Vraag drie gebruikers welke afspraak ze in de praktijk het lastigst vinden.`,
-        klaar: `Er is een nieuwe versie, en je kunt zeggen wat er is veranderd en waarom.` },
-    ],
-    top: `Loop de afspraken één keer per jaar na, en eerder als er een nieuwe tool of nieuwe regelgeving komt. Maak het zwaarder waar het risico groter is, en houd het licht waar dat kan.`,
-    src: ['R08', 'G07', 'M03', 'R02', 'G11'],
-  },
-  'D6.2': {
-    text: `AI maakt niet vaak fouten, maar als het misgaat bij iets belangrijks, kan de schade groot zijn. En mensen merken fouten van AI slecht op. Een overzicht van 74 experimenten laat zien dat mens en AI samen gemiddeld slechter presteren dan de beste van de twee alleen, onder meer doordat mensen foute suggesties overnemen. Toezicht werkt daarom alleen als het is afgesproken: wie kijkt mee, bij welke uitkomsten, en wie mag ingrijpen. Die persoon heeft tijd, kennis en bevoegdheid nodig. Toezicht dat alleen op papier bestaat, beschermt niemand.`,
-    stand: [
-      `Er is nog niets afgesproken. Als het misgaat, moet ter plekke worden uitgezocht wie er iets aan mag doen.`,
-      `Het hangt af van wie er toevallig op let. Dat werkt zolang die persoon er is en tijd heeft.`,
-      `Voor de belangrijkste toepassing ligt vast wie controleert en wie kan ingrijpen. Dat is de basisvoorwaarde van deze pijler.`,
-      `Er is al eens ingegrepen, of jullie hebben het geoefend. Dan weet je dat de afspraak werkt als het nodig is.`,
-    ],
-    stap: [
-      { doen: `Bepaal bij welke toepassing een fout echt schade kan doen, voor een klant, een medewerker of juridisch. Spreek af dat daar altijd een mens meekijkt voordat de uitkomst wordt gebruikt.`,
-        begin: `Stel deze week in het overleg één vraag: bij welk gebruik van AI zouden we het meest schrikken als het misging?`,
-        klaar: `Je hebt één toepassing aangewezen waar toezicht het hardst nodig is.` },
-      { doen: `Leg voor je belangrijkste AI-toepassing vast wie controleert, welke uitkomsten die persoon bekijkt en wie mag ingrijpen of stoppen. Geef er tijd voor, en regel wie het overneemt als die persoon er niet is.`,
-        begin: `Schrijf drie regels op: wie kijkt mee, waarnaar, en wie mag de toepassing stilzetten. Bespreek ze met de persoon om wie het gaat.`,
-        klaar: `De afspraak staat op papier, en de toezichthouder weet ervan en heeft er tijd voor.` },
-      { doen: `Probeer of het werkt. Loop met de toezichthouder door wat er gebeurt als de toepassing een ernstige fout maakt. Wie doet wat, en hoe snel?`,
-        begin: `Plan een halfuur om dat samen door te lopen, aan de hand van een fout die echt had kunnen gebeuren.`,
-        klaar: `De oefening is gedaan, of er is in het echt ingegrepen, en je weet wat je daarna hebt verbeterd.` },
-    ],
-    top: `Breid de afspraak uit naar je andere belangrijke toepassingen. Kijk af en toe met een steekproef of er ook echt wordt gecontroleerd. Bij de zwaarste toepassingen is een tweede paar ogen geen overbodige luxe.`,
-    src: ['R09', 'R10', 'G04', 'G06', 'S05', 'G10'],
-  },
-  'D6.3': {
-    text: `Fouten met AI komen voor, ook als je goede afspraken hebt. In een veldstudie bij een groot adviesbureau kwamen alle soorten fouten voor, terwijl het beleid gewoon op papier stond. Het verschil zit in wat er daarna gebeurt. Organisaties die AI actief gebruiken, melden juist meer fouten. Dat laat zien dat ze zicht hebben, en niet dat ze falen. Waar het meestal misgaat, is de opvolging. Een melding zonder iemand die hem oppakt, verdwijnt in de notulen. Een fout waarover wordt gepraat en waarvan iets wordt geleerd, is de goedkoopste les die je kunt krijgen.`,
-    stand: [
-      `Er is nog niets afgesproken. Fouten worden hersteld door wie ze toevallig ziet, en de rest leert er niets van.`,
-      `Fouten worden opgelost als ze zich voordoen, ieder op een eigen manier. Dezelfde fout kan zo bij drie collega's terugkomen.`,
-      `Fouten worden gemeld bij een vast aanspreekpunt en besproken. Daarmee leert de hele organisatie ervan.`,
-      `Jullie hebben de werkwijze aangepast na een fout. Daar is melden voor bedoeld.`,
-    ],
-    stap: [
-      { doen: `Spreek af wat jullie een fout van AI noemen en bij wie je hem meldt. Houd het simpel: een verkeerd antwoord dat bijna de deur uitging, telt ook.`,
-        begin: `Wijs deze week één persoon aan bij wie mensen een fout kunnen melden, en zeg erbij dat melden gewenst is.`,
-        klaar: `Iedereen die AI gebruikt, weet bij wie een fout gemeld wordt.` },
-      { doen: `Wijs een vast aanspreekpunt aan en houd een eenvoudig logboek bij: datum, wat er gebeurde, wie het zag en wat er is gedaan. Bespreek de meldingen op een vast moment. Spreek ook af wie de leverancier belt en wie een klant inlicht als dat nodig is.`,
-        begin: `Maak een gedeeld document met die vier kolommen, en vul het in met de laatste fout die je je herinnert.`,
-        klaar: `Er staan meldingen in van meer dan één persoon, en ze zijn besproken.` },
-      { doen: `Zoek bij elke fout de oorzaak en verander iets: een instructie, een controlepunt of een afspraak. Vertel het team wat er is veranderd.`,
-        begin: `Kies één fout van de afgelopen tijd en vraag: wat moeten we anders doen, zodat dit niet nog eens gebeurt?`,
-        klaar: `Je kunt een aanpassing aanwijzen die uit een fout is voortgekomen.` },
-    ],
-    top: `Kijk elk kwartaal terug in het logboek. Komen dezelfde fouten terug, dan werkte de aanpassing niet. Blijf melden waarderen, zeker als iemand een eigen fout meldt.`,
-    src: ['G07', 'G02', 'S05', 'R08'],
-  },
-  'D6.4': {
-    text: `Voor AI geldt al wetgeving, ook voor kleine organisaties. De AVG geldt zodra er persoonsgegevens in het spel zijn. De Europese AI-verordening, de EU AI Act, vraagt iedereen die AI gebruikt om maatregelen te nemen die de AI-geletterdheid van medewerkers ondersteunen. Ze stelt extra eisen aan bepaalde toepassingen, zoals chatbots en AI bij beslissingen over personeel. Veel ondernemers vinden die regels abstract, en dat is begrijpelijk. Je hoeft geen jurist te worden. Het helpt al om te weten welke twee of drie regels voor jullie tellen, en wat je daar concreet voor doet. Deze scan is daarbij een oriëntatie. Een juridisch oordeel geeft hij niet.`,
-    stand: [
-      `Jullie hebben je er nog niet in verdiept. Dat geldt voor veel kleine organisaties, maar een deel van de regels geldt nu al.`,
-      `Jullie kennen de regels in grote lijnen. Wat ze voor jullie eigen gebruik betekenen, is nog niet uitgezocht.`,
-      `Jullie hebben uitgezocht welke regels gelden. Daarmee weet je waar je staat.`,
-      `Jullie hebben de werkwijze erop aangepast. Dan zijn de regels onderdeel van het werk geworden.`,
-    ],
-    stap: [
-      { doen: `Wijs iemand aan die de regels voor AI volgt, en begin bij twee vragen. Verwerken we persoonsgegevens met AI? En weten onze mensen genoeg van de AI waarmee ze werken?`,
-        begin: `Lees deze week de handreiking van de Autoriteit Persoonsgegevens over AI-geletterdheid.`,
-        klaar: `Eén persoon heeft dit onderwerp in portefeuille, en kan in een paar zinnen zeggen wat de regels in grote lijnen vragen.` },
-      { doen: `Zoek uit wat voor jullie geldt. Loop je toepassingen langs. Zitten er persoonsgegevens in? Praat een klant met een chatbot? Speelt AI een rol bij werving of beoordeling? Schrijf per toepassing op welke regel ertoe doet.`,
-        begin: `Loop de signalen uit de AI-verordening in deze uitslag langs, en noteer bij elk signaal om welke toepassing het bij jullie gaat.`,
-        klaar: `Je hebt een korte lijst: deze regels gelden voor ons, bij deze toepassingen.` },
-      { doen: `Doe er iets mee. Begin bij wat het snelst kan: een basisintroductie voor gebruikers, AI opnemen in je verwerkingsregister en klanten laten weten wanneer ze met AI te maken hebben. Bewaar wat je hebt gedaan.`,
-        begin: `Kies de regel waar jullie het verst van af staan, en spreek één actie af met een datum.`,
-        klaar: `Er is minstens één aanpassing gedaan, en je kunt laten zien wat en wanneer.` },
-    ],
-    top: `Houd bij wat je per regel hebt gedaan, met de datum erbij. De regels zijn nog in beweging, dus kijk één keer per jaar of er iets is veranderd.`,
-    src: ['R06', 'R07', 'R03', 'R08', 'R02'],
-  },
+ "D1.1": {
+  "stap": [
+   {
+    "doen": "Haal de ideeën boven tafel. Vraag een paar collega's welk werk hen de meeste tijd of ergernis kost, en of AI daar zou kunnen helpen.",
+    "begin": "Zet deze week een halfuur in de agenda met twee collega's en schrijf alle ideeën op, zonder ze te beoordelen.",
+    "klaar": "Je hebt een lijstje van vijf tot tien ideeën, met bij elk idee het probleem dat het oplost."
+   },
+   {
+    "doen": "Kies. Schrijf in één zin op wat jullie met AI willen bereiken en welk doel van de organisatie dat dient. Leg ook vast wat je voorlopig laat liggen, want dat scheelt steeds dezelfde discussie.",
+    "begin": "Leg je ideeën naast je jaarplan en streep door wat daar niet aan bijdraagt.",
+    "klaar": "Een collega die er niet bij was, kan in eigen woorden zeggen waarvoor jullie AI inzetten."
+   },
+   {
+    "doen": "Kijk na een paar maanden of het doel nog klopt met wat je ziet gebeuren. Wat werkte, wat viel tegen, en wat schrap je?",
+    "begin": "Zet nu alvast een datum in de agenda, over drie maanden, om het doel opnieuw te bekijken.",
+    "klaar": "Je kunt één ding noemen dat jullie hebben aangepast of geschrapt, en waarom."
+   }
+  ]
+ },
+ "D1.2": {
+  "stap": [
+   {
+    "doen": "Wijs één persoon aan, met naam. In een klein bedrijf mag dat de directeur zelf zijn. \"Iedereen\" of \"IT\" telt niet.",
+    "begin": "Zet het deze week op de agenda van het directie- of teamoverleg, met één vraag: wie gaat hierover?",
+    "klaar": "Als je drie medewerkers vraagt wie over AI gaat, noemen ze dezelfde naam."
+   },
+   {
+    "doen": "Maak het officieel. Spreek af wat de eindverantwoordelijke doet, hoeveel tijd ervoor is en wat die persoon mag beslissen, ook als dat betekent dat een toepassing wordt stilgezet.",
+    "begin": "Vraag de mensen die het nu trekken wat ze nodig hebben om het goed te kunnen doen, en wie van hen de rol wil.",
+    "klaar": "De rol staat op papier, al is het een halve pagina, en de rest van de organisatie weet ervan."
+   },
+   {
+    "doen": "Laat de rol werken. Spreek vaste momenten af waarop de eindverantwoordelijke vertelt wat er loopt, wat het oplevert en wat er misging. Neem dan ook besluiten: doorgaan, aanpassen of stoppen.",
+    "begin": "Zet AI als vast punt op de agenda van het overleg waar jullie ook over geld en mensen besluiten.",
+    "klaar": "Er is een besluit dat je kunt aanwijzen, met de datum en de reden erbij."
+   }
+  ]
+ },
+ "D1.3": {
+  "stap": [
+   {
+    "doen": "Maak een klein, vast blok vrij om met AI te oefenen op eigen werk. Liever elke week een uur dan één keer een hele dag.",
+    "begin": "Kies deze week één vast moment, bijvoorbeeld vrijdagochtend een uur, voor de mensen die al met AI werken.",
+    "klaar": "Het blok staat in de agenda en is drie keer achter elkaar doorgegaan."
+   },
+   {
+    "doen": "Maak van af en toe een gewoonte. Spreek een vast ritme af voor oefenen en leren, en een bedrag voor tools, zodat mensen niet zelf een abonnement hoeven te betalen.",
+    "begin": "Reken uit wat jullie het afgelopen jaar aan AI hebben uitgegeven, in geld en ruwweg in uren. Dat is je vertrekpunt.",
+    "klaar": "Iedereen die met AI werkt, weet hoeveel tijd ervoor is en wie over het budget gaat."
+   },
+   {
+    "doen": "Leg het vast in de begroting of het jaarplan. Tel ook de tijd mee die controleren en het werk aanpassen kost, want die is vaak groter dan de prijs van de licentie.",
+    "begin": "Zet bij de volgende begrotingsronde één regel voor AI op de lijst, met tools en leren apart.",
+    "klaar": "AI staat als eigen post in de begroting of het jaarplan."
+   }
+  ]
+ },
+ "D2.1": {
+  "stap": [
+   {
+    "doen": "Vraag bij de eerstvolgende keuze de mensen van wie het werk verandert wat zij ervan vinden, voordat je besluit. Luister eerst, en verdedig de tool nog niet.",
+    "begin": "Loop deze week langs bij twee collega's die ermee moeten gaan werken. Vraag welke taken ze graag kwijt willen, en welke juist niet.",
+    "klaar": "Je kunt twee dingen noemen die je van hen hoorde en zelf niet had bedacht."
+   },
+   {
+    "doen": "Maak er een vaste stap van. Spreek af dat er geen AI-toepassing wordt gekozen zonder dat de mensen die ermee werken zijn gehoord. Schrijf hun zorgen op en geef op elke zorg antwoord.",
+    "begin": "Zet bij het eerstvolgende voorstel voor een AI-tool één extra regel: wie hebben we gesproken, en wat zeiden ze?",
+    "klaar": "Bij de laatste keuze kun je laten zien wie er vooraf is gehoord."
+   },
+   {
+    "doen": "Laat zien wat er met de inbreng gebeurt. Vertel na elke keuze wat je hebt overgenomen, wat niet, en waarom. Kijk na een paar maanden samen terug: klopt het met wat we verwachtten?",
+    "begin": "Stuur na het eerstvolgende besluit een kort bericht naar de mensen die meedachten, met wat er met hun punten is gedaan.",
+    "klaar": "Je kunt een voorbeeld geven van een keuze die anders is uitgevallen door wat medewerkers zeiden."
+   }
+  ]
+ },
+ "D2.2": {
+  "stap": [
+   {
+    "doen": "Zeg hardop dat twijfelen aan een AI-uitkomst gewenst is. Het helpt het meest als de leiding zelf het voorbeeld geeft, met een eigen twijfel of een eigen fout.",
+    "begin": "Vertel in het eerstvolgende teamoverleg over één keer dat AI er bij jou naast zat, en vraag wie zoiets herkent.",
+    "klaar": "In dat overleg heeft minstens één collega een eigen voorbeeld gedeeld."
+   },
+   {
+    "doen": "Geef twijfel een vaste plek. Dat kan een agendapunt zijn, een kanaal of een aanspreekpunt. Spreek af dat wie iets meldt, daar nooit op wordt afgerekend.",
+    "begin": "Zet \"wat klopte er niet?\" als vast punt van vijf minuten op de agenda van het teamoverleg.",
+    "klaar": "Er komen meldingen van verschillende mensen, en niet alleen van de vaste critici."
+   },
+   {
+    "doen": "Doe zichtbaar iets met wat mensen melden. Pas een werkwijze, een instructie of een regel aan, en vertel erbij dat dit door een melding komt.",
+    "begin": "Kies één melding van de afgelopen maand en spreek af wat jullie erdoor veranderen.",
+    "klaar": "Je kunt een aanpassing aanwijzen die er is gekomen doordat iemand iets aankaartte."
+   }
+  ]
+ },
+ "D2.3": {
+  "stap": [
+   {
+    "doen": "Vraag in het team welke taken mensen graag door AI laten doen, en welke juist niet. De antwoorden laten zien wat mensen waardevol vinden in hun werk.",
+    "begin": "Neem die ene vraag deze week mee naar het teamoverleg en schrijf de antwoorden op.",
+    "klaar": "Je hebt een lijstje met taken die mensen kwijt willen, en taken die ze zelf willen blijven doen."
+   },
+   {
+    "doen": "Maak er een terugkerend gesprek van. Bespreek een paar keer per jaar een recent stuk werk dat met AI is gemaakt. Werd het beter, sneller of juist vlakker? En wat deed het met de werkdruk?",
+    "begin": "Plan het eerste gesprek in en vraag één collega om een voorbeeld mee te nemen.",
+    "klaar": "Het gesprek heeft twee keer plaatsgevonden, met voorbeelden uit het eigen werk."
+   },
+   {
+    "doen": "Verbind er een gevolg aan. Spreek per taak af wat mensenwerk blijft, en pas de werkwijze aan waar AI het werk voller of schraler maakt.",
+    "begin": "Kies één taak waarover mensen in het laatste gesprek klaagden, en spreek af wat jullie anders gaan doen.",
+    "klaar": "Je kunt een afspraak of werkwijze noemen die is veranderd door zo'n gesprek."
+   }
+  ]
+ },
+ "D3.1": {
+  "stap": [
+   {
+    "doen": "Vraag het gewoon, en zonder oordeel. Wie gebruikt welke AI-tool, en waarvoor? Neem privé-accounts mee, en de AI die al in je software zit.",
+    "begin": "Stel deze week één vraag in het teamoverleg, of stuur hem rond: welke AI-tools heb je de afgelopen maand voor je werk gebruikt?",
+    "klaar": "Je hebt van elk team een antwoord, ook van de mensen die zeggen dat ze niets gebruiken."
+   },
+   {
+    "doen": "Zet het op een lijst. Per persoon of team: welke tool, waarvoor, en met wat voor gegevens. Een spreadsheet is genoeg. Je lijst met abonnementen en je verwerkingsregister helpen om niets te missen.",
+    "begin": "Maak de lijst met wat je al weet, en laat twee collega's aanvullen wat ontbreekt.",
+    "klaar": "De lijst bestaat, en er is iemand bij wie nieuwe tools worden gemeld."
+   },
+   {
+    "doen": "Houd de lijst levend. Werk hem bij bij elke nieuwe tool en elke nieuwe collega, en loop hem één keer per jaar helemaal na. Neem ook freelancers en ingehuurde mensen mee.",
+    "begin": "Zet \"AI-lijst bijwerken\" op de checklist voor nieuwe medewerkers en voor nieuwe software.",
+    "klaar": "De lijst is bijgewerkt na de laatste wijziging in mensen of tools."
+   }
+  ]
+ },
+ "D3.2": {
+  "stap": [
+   {
+    "doen": "Geef iedereen die AI gebruikt een korte introductie van een uur. Behandel hoe het werkt, waar het vaak fout gaat en welke gegevens er niet in mogen, met voorbeelden uit jullie eigen werk.",
+    "begin": "Vraag deze week de collega die er het meest van weet om drie voorbeelden te verzamelen: één waar AI goed hielp, en twee waar het misging.",
+    "klaar": "Er staat een datum voor de eerste sessie, en je weet wie erbij moeten zijn."
+   },
+   {
+    "doen": "Maak de introductie een vast onderdeel voor iedereen die met AI werkt, ook voor nieuwe collega's. Houd bij wie hem heeft gehad. Een lijstje met namen en data is genoeg.",
+    "begin": "Zet op een rij wie er met AI werkt, en streep af wie al iets heeft gevolgd. Wie overblijft, is je doelgroep.",
+    "klaar": "Iedereen die met AI werkt heeft de introductie gehad, en hij zit in het inwerkprogramma."
+   },
+   {
+    "doen": "Plan een herhaling. Loop één keer per jaar na wat er is veranderd in tools, regels en jullie eigen afspraken, en pas de introductie daarop aan. Kijk ook wat mensen per rol extra nodig hebben.",
+    "begin": "Vraag drie gebruikers wat ze in de introductie hebben gemist, of wat inmiddels niet meer klopt.",
+    "klaar": "Er is een vernieuwde versie gegeven, en je kunt zeggen wat er is veranderd."
+   }
+  ]
+ },
+ "D3.3": {
+  "stap": [
+   {
+    "doen": "Spreek af dat uitkomsten die ertoe doen nooit ongelezen de deur uitgaan. Bepaal samen wat \"ertoe doen\" bij jullie betekent, bijvoorbeeld alles wat naar een klant gaat of waar een besluit op rust.",
+    "begin": "Vraag in het teamoverleg naar een voorbeeld waarin AI er duidelijk naast zat. Zulke voorbeelden maken alert zonder mensen bang te maken.",
+    "klaar": "Het team kan in één zin zeggen welke uitkomsten altijd worden nagelezen."
+   },
+   {
+    "doen": "Maak een korte, vaste controle voor belangrijke uitkomsten. Drie vragen zijn genoeg. Klopt de bron? Is er een tweede bron? Zou ik dit ook zo zeggen zonder AI? Spreek ook af wie controleert, en geef daar tijd voor.",
+    "begin": "Schrijf de controlevragen op met twee gebruikers, en zet ze bij jullie afspraken over AI.",
+    "klaar": "Bij een recent stuk werk kan de maker laten zien wat er is gecontroleerd."
+   },
+   {
+    "doen": "Leer van wat misgaat. Bespreek elke fout die erdoorheen glipte, en pas de controle aan. Test af en toe of de controle werkt, bijvoorbeeld door een uitkomst met een bewuste fout te laten nalopen.",
+    "begin": "Neem de laatste fout die jullie tegenkwamen en vraag: bij welke controlevraag hadden we dit kunnen zien?",
+    "klaar": "De controle is op minstens één punt aangepast, en je kunt zeggen waarom."
+   }
+  ]
+ },
+ "D3.4": {
+  "stap": [
+   {
+    "doen": "Maak het bespreekbaar. Vraag hoe collega's AI gebruiken bij werk waar hun oordeel telt, zoals schrijven, analyseren of adviseren. Beginnen ze zelf, of begint AI?",
+    "begin": "Probeer het deze week zelf bij één taak. Schrijf eerst in vijf minuten je eigen opzet en vraag daarna pas AI om hulp. Vertel in het team wat het verschil was.",
+    "klaar": "Minstens twee collega's hebben het ook geprobeerd en hun ervaring gedeeld."
+   },
+   {
+    "doen": "Spreek het af voor de taken waar het ertoe doet. Niet voor alles, want bij een samenvatting of een vertaling is het zonde van de tijd. Kies samen de twee of drie soorten werk waar een eigen opzet eerst komt.",
+    "begin": "Maak met het team een lijstje: bij welk werk willen wij dat het eerste idee van een mens komt?",
+    "klaar": "De afspraak staat bij jullie andere afspraken over AI, met de taken erbij genoemd."
+   },
+   {
+    "doen": "Kijk of de afspraak werkt. Vraag na een paar maanden wie zich eraan houdt, waar het helpt en waar het alleen ophoudt. Pas de lijst met taken daarop aan.",
+    "begin": "Vraag drie collega's bij welke taak de afspraak hen helpt, en bij welke niet.",
+    "klaar": "De lijst met taken is minstens één keer bijgesteld."
+   }
+  ]
+ },
+ "D4.1": {
+  "stap": [
+   {
+    "doen": "Kies één werkproces waar je AI voor gebruikt of wilt gebruiken, en schat hoe het nu loopt. Hoe lang duurt het, hoe vaak komt het voor, en hoe vaak gaat het mis?",
+    "begin": "Vraag deze week de twee mensen die dat werk doen om hun schatting, en schrijf die op met de datum erbij.",
+    "klaar": "Er staat een eerste schatting op papier voor één werkproces."
+   },
+   {
+    "doen": "Vervang het gevoel door cijfers. Kies één werkproces en houd een of twee weken bij hoe lang het duurt en hoe vaak er iets hersteld moet worden. Een turflijst is genoeg. Doe het voordat je iets verandert.",
+    "begin": "Maak een eenvoudige turflijst, en laat de mensen die het werk doen hem een week bijhouden.",
+    "klaar": "Je hebt cijfers van minstens een week, en je weet wanneer je opnieuw meet."
+   },
+   {
+    "doen": "Meet opnieuw, op dezelfde manier, als AI een tijd in gebruik is. Kijk niet alleen naar snelheid, maar ook naar fouten en naar de tijd die controleren kost.",
+    "begin": "Zet de datum van de tweede meting nu in de agenda, twee tot drie maanden na de start.",
+    "klaar": "Je hebt een vergelijking van voor en na, en je hebt er een besluit op genomen."
+   }
+  ]
+ },
+ "D4.2": {
+  "stap": [
+   {
+    "doen": "Maak zichtbaar waar AI al wordt gebruikt. Vraag wie het waarvoor gebruikt en wat het oplevert. Je zoekt naar toepassingen waar meer mensen iets aan hebben.",
+    "begin": "Vraag deze week twee collega's om te laten zien hoe ze AI gebruiken bij een taak die anderen ook doen.",
+    "klaar": "Je kent drie manieren waarop AI nu in het werk wordt gebruikt, en je weet welke de moeite van het delen waard is."
+   },
+   {
+    "doen": "Kies één werkproces dat stabiel loopt, en spreek af welke stap AI doet en welke de mens. Schrijf het op van begin tot eind, met wie controleert.",
+    "begin": "Teken het gekozen proces in vijf tot acht stappen op één vel, samen met de mensen die het werk doen.",
+    "klaar": "Iedereen in dat proces werkt op dezelfde manier met AI, en een nieuwe collega kan het nalezen."
+   },
+   {
+    "doen": "Pas het proces aan. Kijk na een paar maanden welke stappen overbodig zijn geworden, waar dubbel werk zit en waar een controlepunt ontbreekt. AI bovenop het oude proces leggen levert weinig op.",
+    "begin": "Vraag de mensen in het proces welke stap ze nog doen omdat het altijd zo ging.",
+    "klaar": "Minstens één stap is geschrapt, verplaatst of toegevoegd, en je kunt zeggen wat dat opleverde."
+   }
+  ]
+ },
+ "D4.3": {
+  "stap": [
+   {
+    "doen": "Zet op een rij wat jullie aan AI uitgeven. Begin bij de abonnementen, ook de abonnementen die mensen zelf betalen of declareren.",
+    "begin": "Vraag deze week bij de administratie op welke AI-abonnementen er lopen en wat ze per maand kosten.",
+    "klaar": "Je hebt één bedrag per maand voor alle licenties samen."
+   },
+   {
+    "doen": "Tel de uren erbij. Hoeveel tijd ging er zitten in uitproberen, leren en het werk anders inrichten? Een ruwe schatting per persoon is genoeg.",
+    "begin": "Vraag drie gebruikers hoeveel uur ze de afgelopen maand kwijt waren aan leren en uitproberen.",
+    "klaar": "Naast het bedrag voor licenties staat een schatting van de uren."
+   },
+   {
+    "doen": "Tel ook de tijd die blijft terugkomen: uitkomsten nalezen, fouten herstellen, opnieuw vragen. Die tijd gaat van de winst af.",
+    "begin": "Laat twee collega's een week turven hoeveel tijd ze besteden aan het controleren en verbeteren van AI-uitkomsten.",
+    "klaar": "Je kunt per toepassing zeggen wat hij kost, met de controletijd erbij."
+   }
+  ]
+ },
+ "D4.4": {
+  "stap": [
+   {
+    "doen": "Kies één toepassing en vraag de gebruikers wat die hun oplevert. Hoeveel tijd scheelt het per week, en wat doen ze met die tijd?",
+    "begin": "Stel die twee vragen deze week aan drie mensen die dezelfde toepassing gebruiken.",
+    "klaar": "Je hebt voor één toepassing een schatting in uren per week, van de gebruikers zelf."
+   },
+   {
+    "doen": "Maak een eenvoudige som voor één toepassing. Wat levert die op in uren of geld, en wat kost hij? Spreek ook af waar de vrijgekomen tijd naartoe gaat, bijvoorbeeld meer tijd voor klanten of minder overwerk.",
+    "begin": "Kies de toepassing die het meest wordt gebruikt, en zet opbrengst en kosten naast elkaar op een half A4.",
+    "klaar": "Je kunt in twee zinnen uitleggen wat de toepassing oplevert en wat hij kost."
+   },
+   {
+    "doen": "Gebruik de cijfers om te besluiten. Geef elke pilot een einddatum, en spreek vooraf af wanneer je doorgaat, bijstuurt of stopt. Op tijd stoppen is ook een goed resultaat.",
+    "begin": "Kies één lopende pilot en zet een datum in de agenda waarop jullie aan de hand van de cijfers besluiten.",
+    "klaar": "Er is een besluit genomen waarbij de cijfers op tafel lagen, en dat besluit is vastgelegd."
+   }
+  ]
+ },
+ "D5.1": {
+  "stap": [
+   {
+    "doen": "Maak één eenvoudige regel voor welke gegevens wel en niet in AI-tools mogen. Drie kleuren werken goed: groen voor openbaar, oranje voor intern, rood voor klant- en persoonsgegevens. Noem bij elke kleur voorbeelden uit jullie eigen werk.",
+    "begin": "Schrijf deze week de drie kleuren op met elk drie voorbeelden, en leg ze voor aan één collega die veel met AI werkt.",
+    "klaar": "De regel past op een half A4, en die collega vindt hem werkbaar."
+   },
+   {
+    "doen": "Leg vast wat jullie mondeling hebben besproken, en maak het bekend bij iedereen die AI gebruikt. Noem de tools bij naam: in welke tool mag wat? Zorg dat er een goedgekeurde tool is waarin mensen hun werk kunnen doen.",
+    "begin": "Schrijf de regel deze week op, zet hem op de plek waar jullie afspraken staan en bespreek hem in het eerstvolgende teamoverleg.",
+    "klaar": "Als je een gebruiker vraagt of een klantdossier in de AI-tool mag, krijg je zonder aarzelen het goede antwoord."
+   },
+   {
+    "doen": "Toets de regel aan de praktijk. Verzamel twijfelgevallen, bespreek ze en pas de regel of de voorbeelden aan. Ga bij je belangrijkste tool na wat de leverancier met je gegevens doet.",
+    "begin": "Vraag in het team naar één situatie waarin iemand twijfelde of iets erin mocht.",
+    "klaar": "De regel of de voorbeelden zijn aangepast door een geval uit de praktijk."
+   }
+  ]
+ },
+ "D5.2": {
+  "stap": [
+   {
+    "doen": "Breng in beeld welke AI-tools mensen gebruiken, en waarom juist die. Oordeel nog niet. Je wilt weten wat mensen nodig hebben, zodat je straks tools kiest waar ze ook mee willen werken.",
+    "begin": "Vraag deze week rond welke tools mensen nu gebruiken, en wat ze er fijn aan vinden.",
+    "klaar": "Je hebt een lijstje van de tools die in gebruik zijn, met waarvoor."
+   },
+   {
+    "doen": "Maak een keuze en regel de toegang. Spreek af welke één of twee tools mogen, geef mensen daar een zakelijk account voor en zet inloggen in twee stappen aan. Kies tools die goed genoeg zijn. Anders blijven mensen hun eigen account gebruiken.",
+    "begin": "Vraag de mensen die een andere tool gebruiken wat ze missen in de tools die jullie al kennen.",
+    "klaar": "Iedereen weet welke tools mogen en werkt met een zakelijk account. Voor uitzonderingen is er een afspraak."
+   },
+   {
+    "doen": "Houd de keuze actueel. Kijk een of twee keer per jaar of de tools nog passen bij het werk en bij jullie eisen aan veiligheid. Maak het makkelijk om een nieuwe tool voor te stellen.",
+    "begin": "Spreek af bij wie mensen een nieuwe tool kunnen voorstellen, en hoe snel ze antwoord krijgen.",
+    "klaar": "De lijst is minstens één keer herzien, en je kunt zeggen waarom."
+   }
+  ]
+ },
+ "D5.3": {
+  "stap": [
+   {
+    "doen": "Zoek het uit voor je belangrijkste AI-tool. Waar worden de gegevens verwerkt en opgeslagen, en gebruikt de leverancier ze om te trainen? Het staat meestal in de voorwaarden of de privacyverklaring.",
+    "begin": "Open deze week de privacyverklaring van de tool die jullie het meest gebruiken, en zoek op \"opslag\", \"verwerking\" en \"training\".",
+    "klaar": "Je kunt voor die ene tool zeggen in welk land de gegevens staan en of ermee wordt getraind."
+   },
+   {
+    "doen": "Zoek voor al je belangrijke tools uit waar de gegevens staan, en zet het op een rij: leverancier, land, wel of niet trainen, en of er een verwerkersovereenkomst is. Vergeet de AI niet die in je gewone software zit.",
+    "begin": "Maak een lijst van je tools met vier kolommen: leverancier, land, training en overeenkomst. Vul eerst in wat je al weet.",
+    "klaar": "De lijst is ingevuld voor de tools waar klant- of persoonsgegevens in kunnen komen."
+   },
+   {
+    "doen": "Laat het meewegen. Vraag bij elke nieuwe tool waar de gegevens komen te staan, of er een Europees alternatief is en hoe je je gegevens terugkrijgt als je weg wilt.",
+    "begin": "Zet die drie vragen op het lijstje dat jullie gebruiken als je nieuwe software kiest.",
+    "klaar": "Bij de laatste keuze voor een tool zijn de vragen gesteld, en het antwoord is vastgelegd."
+   }
+  ]
+ },
+ "D5.4": {
+  "stap": [
+   {
+    "doen": "Breng in kaart welke toepassingen bij jullie zelf iets doen, ook als dat een functie is in software die je al had. Schrijf per agent op wat hij kan: lezen, voorstellen of uitvoeren.",
+    "begin": "Vraag deze week aan wie agents heeft ingesteld om te laten zien wat ze doen, en wat er zonder tussenkomst gebeurt.",
+    "klaar": "Je hebt een lijstje van agents, met per agent wat hij zelfstandig doet."
+   },
+   {
+    "doen": "Maak het overzicht compleet en deel het. Leg vast wie welke agent gebruikt, waarvoor, en wat die agent zelfstandig doet. Zorg dat niet alleen de maker het weet.",
+    "begin": "Vraag deze week aan iedereen die een agent heeft ingesteld om hem in één regel te beschrijven: wat doet hij, en voor wie?",
+    "klaar": "Er is één lijst van agents die de leiding kent, met per agent een eigenaar."
+   },
+   {
+    "doen": "Spreek per agent af waar de grens ligt. Wat mag hij zelf, en waarvoor geeft eerst een mens akkoord? Laat een agent beginnen met voorstellen doen, en geef pas ruimte om uit te voeren als dat goed gaat. Zorg dat iemand weet hoe je hem stilzet.",
+    "begin": "Kies de agent die het meest kan en schrijf in drie regels op wat hij mag, wat niet, en wie hem kan stilzetten.",
+    "klaar": "Voor elke agent staat op papier wat hij mag en wie erover gaat, en het stilzetten is één keer geprobeerd."
+   }
+  ]
+ },
+ "D6.1": {
+  "stap": [
+   {
+    "doen": "Schrijf op één A4 waarvoor jullie AI wel en niet gebruiken. Begin bij wat mensen nu al doen, en leg bij elke \"niet\" uit waarom. Afspraken met een reden worden beter gevolgd.",
+    "begin": "Schrijf deze week drie dingen op waarvoor AI bij jullie prima is, en drie waarvoor niet. Leg het voor aan twee collega's.",
+    "klaar": "Er ligt een eerste versie waar twee gebruikers op hebben gereageerd."
+   },
+   {
+    "doen": "Maak de afspraken officieel. Leg ze vast, sluit aan op je privacy- en IT-afspraken en bespreek ze met iedereen die AI gebruikt. Zorg dat mensen weten bij wie ze met een vraag terechtkunnen.",
+    "begin": "Schrijf deze week op wat jullie hebben besproken, en plan een kwartier in het teamoverleg om het door te nemen.",
+    "klaar": "Elke gebruiker weet waar de afspraken staan en kan er twee noemen."
+   },
+   {
+    "doen": "Vraag of de afspraken werken. Waar lopen mensen tegenaan, welke regel wordt stilletjes overgeslagen, en wat ontbreekt? Pas aan wat niet werkt.",
+    "begin": "Vraag drie gebruikers welke afspraak ze in de praktijk het lastigst vinden.",
+    "klaar": "Er is een nieuwe versie, en je kunt zeggen wat er is veranderd en waarom."
+   }
+  ]
+ },
+ "D6.2": {
+  "stap": [
+   {
+    "doen": "Bepaal bij welke toepassing een fout echt schade kan doen, voor een klant, een medewerker of juridisch. Spreek af dat daar altijd een mens meekijkt voordat de uitkomst wordt gebruikt.",
+    "begin": "Stel deze week in het overleg één vraag: bij welk gebruik van AI zouden we het meest schrikken als het misging?",
+    "klaar": "Je hebt één toepassing aangewezen waar toezicht het hardst nodig is."
+   },
+   {
+    "doen": "Leg voor je belangrijkste AI-toepassing vast wie controleert, welke uitkomsten die persoon bekijkt en wie mag ingrijpen of stoppen. Geef er tijd voor, en regel wie het overneemt als die persoon er niet is.",
+    "begin": "Schrijf drie regels op: wie kijkt mee, waarnaar, en wie mag de toepassing stilzetten. Bespreek ze met de persoon om wie het gaat.",
+    "klaar": "De afspraak staat op papier, en de toezichthouder weet ervan en heeft er tijd voor."
+   },
+   {
+    "doen": "Probeer of het werkt. Loop met de toezichthouder door wat er gebeurt als de toepassing een ernstige fout maakt. Wie doet wat, en hoe snel?",
+    "begin": "Plan een halfuur om dat samen door te lopen, aan de hand van een fout die echt had kunnen gebeuren.",
+    "klaar": "De oefening is gedaan, of er is in het echt ingegrepen, en je weet wat je daarna hebt verbeterd."
+   }
+  ]
+ },
+ "D6.3": {
+  "stap": [
+   {
+    "doen": "Spreek af wat jullie een fout van AI noemen en bij wie je hem meldt. Houd het simpel: een verkeerd antwoord dat bijna de deur uitging, telt ook.",
+    "begin": "Wijs deze week één persoon aan bij wie mensen een fout kunnen melden, en zeg erbij dat melden gewenst is.",
+    "klaar": "Iedereen die AI gebruikt, weet bij wie een fout gemeld wordt."
+   },
+   {
+    "doen": "Wijs een vast aanspreekpunt aan en houd een eenvoudig logboek bij: datum, wat er gebeurde, wie het zag en wat er is gedaan. Bespreek de meldingen op een vast moment. Spreek ook af wie de leverancier belt en wie een klant inlicht als dat nodig is.",
+    "begin": "Maak een gedeeld document met die vier kolommen, en vul het in met de laatste fout die je je herinnert.",
+    "klaar": "Er staan meldingen in van meer dan één persoon, en ze zijn besproken."
+   },
+   {
+    "doen": "Zoek bij elke fout de oorzaak en verander iets: een instructie, een controlepunt of een afspraak. Vertel het team wat er is veranderd.",
+    "begin": "Kies één fout van de afgelopen tijd en vraag: wat moeten we anders doen, zodat dit niet nog eens gebeurt?",
+    "klaar": "Je kunt een aanpassing aanwijzen die uit een fout is voortgekomen."
+   }
+  ]
+ },
+ "D6.4": {
+  "stap": [
+   {
+    "doen": "Wijs iemand aan die de regels voor AI volgt, en begin bij twee vragen. Verwerken we persoonsgegevens met AI? En weten onze mensen genoeg van de AI waarmee ze werken?",
+    "begin": "Lees deze week de handreiking van de Autoriteit Persoonsgegevens over AI-geletterdheid.",
+    "klaar": "Eén persoon heeft dit onderwerp in portefeuille, en kan in een paar zinnen zeggen wat de regels in grote lijnen vragen."
+   },
+   {
+    "doen": "Zoek uit wat voor jullie geldt. Loop je toepassingen langs. Zitten er persoonsgegevens in? Praat een klant met een chatbot? Speelt AI een rol bij werving of beoordeling? Schrijf per toepassing op welke regel ertoe doet.",
+    "begin": "Loop de signalen uit de AI-verordening in deze uitslag langs, en noteer bij elk signaal om welke toepassing het bij jullie gaat.",
+    "klaar": "Je hebt een korte lijst: deze regels gelden voor ons, bij deze toepassingen."
+   },
+   {
+    "doen": "Doe er iets mee. Begin bij wat het snelst kan: een basisintroductie voor gebruikers, AI opnemen in je verwerkingsregister en klanten laten weten wanneer ze met AI te maken hebben. Bewaar wat je hebt gedaan.",
+    "begin": "Kies de regel waar jullie het verst van af staan, en spreek één actie af met een datum.",
+    "klaar": "Er is minstens één aanpassing gedaan, en je kunt laten zien wat en wanneer."
+   }
+  ]
+ }
 };
-
-// Waarom juist deze vraag een poortvraag is: een basisvoorwaarde voor de rest van de pijler.
-export const GATE_WHY = {
-  '1.2': `Zolang niemand eindverantwoordelijk is, kan niemand beslissen wat doorgaat en niemand ingrijpen als het misgaat. Afspraken, overzichten en controles blijven dan vrijblijvend, hoe goed ze ook zijn.`,
-  '2.2': `Een mens die meekijkt, beschermt alleen als die mens durft te zeggen dat iets niet klopt. Houden mensen hun twijfel voor zich, dan blijven fouten onzichtbaar en kan de organisatie er niet van leren.`,
-  '3.1': `Alles in deze pijler begint bij weten wie met AI werkt. Zonder dat zicht kun je de juiste mensen geen introductie geven, niet inschatten waar de risico's zitten en niet laten zien dat je aan AI-geletterdheid werkt, zoals de AI-verordening vraagt.`,
-  '4.1': `Zonder nulmeting heb je niets om mee te vergelijken. Of AI tijd, geld of kwaliteit oplevert, kun je dan alleen op gevoel beoordelen, en dat gevoel valt bij AI vaak te gunstig uit. Een nulmeting kun je bovendien achteraf niet meer maken.`,
-  '5.1': `Dit is de plek waar een fout direct schade doet en niet meer te herstellen is. Gegevens die eenmaal in een externe AI-tool staan, haal je niet terug, en je organisatie blijft er onder de AVG verantwoordelijk voor.`,
-  '6.2': `AI gaat niet vaak de fout in, maar als het misgaat bij iets belangrijks, kan het duur zijn. Mensen merken zulke fouten zelf slecht op. Zonder afspraak over wie controleert en wie mag ingrijpen, valt het laatste vangnet weg.`,
-};
-
-// Uitleg bij de basis per pijler in de uitslag.
 export const FLAG_TEXT = {
-  intro: `Elke pijler heeft één vraag naar de basis: datgene waar de rest van de pijler op voortbouwt. Hieronder staat waar die basis nog aandacht vraagt. Daar begin je mee.`,
-  why: 'Waarom dit de basis is',
-  answer: 'Je antwoord',
-  todo: 'Wat je kunt doen, staat hieronder bij je prioriteiten.',
-  unknown: `Je weet nog niet hoe het hier staat. Zoek dat eerst uit. Dat is zelf al een eerste stap.`,
+ "intro": "Elke pijler heeft één vraag naar de basis: datgene waar de rest van de pijler op voortbouwt. Hieronder staat waar die basis nog aandacht vraagt. Daar begin je mee.",
+ "why": "Waarom dit de basis is",
+ "answer": "Je antwoord",
+ "todo": "Wat je kunt doen, staat hieronder bij je prioriteiten.",
+ "unknown": "Je weet nog niet hoe het hier staat. Zoek dat eerst uit. Dat is zelf al een eerste stap."
 };
-
-// Advies voor een dimensie waar het antwoord "weet ik niet" is.
+export const GATE_WHY = {
+ "1.2": "Zolang niemand eindverantwoordelijk is, kan niemand beslissen wat doorgaat en niemand ingrijpen als het misgaat. Afspraken, overzichten en controles blijven dan vrijblijvend, hoe goed ze ook zijn.",
+ "2.2": "Een mens die meekijkt, beschermt alleen als die mens durft te zeggen dat iets niet klopt. Houden mensen hun twijfel voor zich, dan blijven fouten onzichtbaar en kan de organisatie er niet van leren.",
+ "3.1": "Alles in deze pijler begint bij weten wie met AI werkt. Zonder dat zicht kun je de juiste mensen geen introductie geven, niet inschatten waar de risico's zitten en niet laten zien dat je aan AI-geletterdheid werkt, zoals de AI-verordening vraagt.",
+ "4.1": "Zonder nulmeting heb je niets om mee te vergelijken. Of AI tijd, geld of kwaliteit oplevert, kun je dan alleen op gevoel beoordelen, en dat gevoel valt bij AI vaak te gunstig uit. Een nulmeting kun je bovendien achteraf niet meer maken.",
+ "5.1": "Dit is de plek waar een fout direct schade doet en niet meer te herstellen is. Gegevens die eenmaal in een externe AI-tool staan, haal je niet terug, en je organisatie blijft er onder de AVG verantwoordelijk voor.",
+ "6.2": "AI gaat niet vaak de fout in, maar als het misgaat bij iets belangrijks, kan het duur zijn. Mensen merken zulke fouten zelf slecht op. Zonder afspraak over wie controleert en wie mag ingrijpen, valt het laatste vangnet weg."
+};
 export const GREY_ADVICE = {
-  doen: `Je weet nog niet hoe het hier staat. Dat is zelf een uitkomst, want wat je niet ziet, kun je niet bijsturen. Zoek het uit voordat je verdergaat.`,
-  begin: `Vraag het deze week na bij een collega die het wel weet, bijvoorbeeld bij IT, HR of de leiding.`,
-  klaar: `Je kunt de vraag beantwoorden, en je vult dit onderdeel van de scan opnieuw in.`,
+ "doen": "Je weet nog niet hoe het hier staat. Dat is zelf een uitkomst, want wat je niet ziet, kun je niet bijsturen. Zoek het uit voordat je verdergaat.",
+ "begin": "Vraag het deze week na bij een collega die het wel weet, bijvoorbeeld bij IT, HR of de leiding.",
+ "klaar": "Je kunt de vraag beantwoorden, en je vult dit onderdeel van de scan opnieuw in."
 };
